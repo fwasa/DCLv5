@@ -1,0 +1,53 @@
+
+> debtcalculatorlab@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./src/data/big10-states-data.js
+Error: 
+  [31mx[0m Expected ',', got 'disposable'
+    ,-[[36;1;4m/home/claude/debtcalculatorlab/src/data/big10-states-data.js[0m:39:1]
+ [2m39[0m |       },
+ [2m40[0m |       {
+ [2m41[0m |         question: "What should California residents know about debt relief?",
+ [2m42[0m |         answer: "California residents benefit from some of the nation's strongest consumer protection laws, which impacts how debt relief works. Key considerations: settlement companies must be licensed by the Department of Financial Protection and Innovation, they can't charge upfront fees before settling at least one debt, and they must follow strict disclosure requirements. California's community property laws mean spouses' debts can affect both partners, important to consider before starting settlement. The state also has a 4-year statute of limitations on most credit card debt-after this period, collectors can't sue you, though they can still attempt collection. Our calculator doesn't factor in statute of limitations because we focus on active debt resolution, but this legal timeframe affects your options. California's high cost of living also influences what's considered "disposable income" for settlement payments. The calculator accounts for your actual income and expenses to model realistic payment amounts specific to your situation. The calculator shows complete costs including fees (typically 20-25% of enrolled debt) transparently. Consider consulting a California-licensed attorney to evaluate your options."
+    : [31;1m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^^^^^^^^^^[0m
+ [2m43[0m |       }
+ [2m44[0m |     ],
+ [2m45[0m |     
+    `----
+
+Caused by:
+    Syntax Error
+
+Stack backtrace:
+   0: <unknown>
+   1: <unknown>
+   2: <unknown>
+   3: <unknown>
+   4: <unknown>
+   5: <unknown>
+   6: <unknown>
+   7: <unknown>
+   8: <unknown>
+   9: <unknown>
+  10: <unknown>
+  11: <unknown>
+  12: <unknown>
+  13: _ZZN4node14ThreadPoolWork12ScheduleWorkEvENUlP9uv_work_sE_4_FUNES2_
+  14: worker
+             at /home/iojs/build/ws/out/../deps/uv/src/threadpool.c:123:5
+  15: <unknown>
+  16: <unknown>
+
+Import trace for requested module:
+./src/data/big10-states-data.js
+./src/data/all-locations.js
+./src/app/debt-relief-calculator/[state]/page.js
+
+
+> Build failed because of webpack errors

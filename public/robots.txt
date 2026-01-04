@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and API endpoints (if they exist in future)
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://debtcalculatorlab.com/sitemap.xml

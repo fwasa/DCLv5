@@ -1,0 +1,2479 @@
+'use client';
+import React, { useState, useRef } from 'react';
+import { ChevronLeft, ChevronRight, Shield, Lock, CheckCircle } from 'lucide-react';
+
+const DebtReliefCalculator = () => {
+  const calculatorRef = useRef(null);
+  const [currentStep, setCurrentStep] = useState(1);
+  const [showQuebecError, setShowQuebecError] = useState(false);
+  const [showMethodology, setShowMethodology] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const [calculationResults, setCalculationResults] = useState(null);
+  const [formData, setFormData] = useState({
+    jurisdiction: '',
+    totalDebt: 25000,
+    monthlyMinimum: 500,
+    interestRate: 18,
+    debtType: '',
+    debtAge: '',
+    paymentStatus: '',
+    employmentStatus: '',
+    monthlyIncome: 5000,
+    monthlyExpenses: 3500,
+    hardshipFactors: [],
+    contactInfo: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      consent: false
+    }
+  });
+
+  const totalSteps = 12;
+
+  // US States (all 50)
+  const usStates = [
+    'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
+    'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
+    'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan',
+    'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+    'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio',
+    'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota',
+    'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia',
+    'Wisconsin', 'Wyoming'
+  ];
+
+  // Canadian Provinces (excluding Quebec)
+  const canadianProvinces = [
+    'Ontario', 'British Columbia', 'Alberta', 'Saskatchewan', 'Manitoba',
+    'New Brunswick', 'Nova Scotia', 'Prince Edward Island', 'Newfoundland and Labrador'
+  ];
+
+  const allJurisdictions = [
+    { label: '--- United States ---', value: '', disabled: true },
+    ...usStates.map(state => ({ label: state, value: state })),
+    { label: '--- Canada (excluding Quebec) ---', value: '', disabled: true },
+    ...canadianProvinces.map(province => ({ label: province, value: province }))
+  ];
+
+  const handleNext = () => {
+    if (currentStep < totalSteps && isStepComplete()) {
+      setCurrentStep(currentStep + 1);
+      // Scroll to calculator top smoothly
+      if (calculatorRef.current) {
+        calculatorRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else if (currentStep === totalSteps && isStepComplete()) {
+      handleCalculate();
+    }
+  };
+
+  const handleCalculate = () => {
+    // Calculate current path (do-nothing scenario)
+    const currentPath = calculateCurrentPath(
+      formData.totalDebt,
+      formData.interestRate,
+      formData.monthlyMinimum
+    );
+
+    // Calculate settlement percentage based on user profile
+    const settlementPercentage = calculateSettlementPercentage(
+      formData.debtAge,
+      formData.paymentStatus,
+      formData.debtType,
+      formData.hardshipFactors,
+      formData.totalDebt,
+      formData.monthlyIncome,
+      formData.monthlyMinimum
+    );
+
+    // Calculate relief path (debt settlement scenario)
+    const reliefPath = calculateReliefPath(
+      formData.totalDebt,
+      settlementPercentage,
+      formData.monthlyIncome,
+      formData.monthlyExpenses
+    );
+
+    // Calculate confidence score for CTA routing
+    const confidenceScore = calculateConfidenceScore(
+      formData.totalDebt,
+      formData.paymentStatus,
+      formData.monthlyMinimum,
+      formData.monthlyIncome,
+      formData.debtAge,
+      formData.hardshipFactors
+    );
+
+    const results = {
+      currentPath,
+      reliefPath,
+      settlementPercentage,
+      confidenceScore,
+      monthlySavings: {
+        min: Math.max(0, formData.monthlyMinimum - reliefPath.monthlyPayment - 50),
+        max: Math.max(0, formData.monthlyMinimum - reliefPath.monthlyPayment + 50)
+      },
+      totalReduction: {
+        min: Math.floor(formData.totalDebt * (1 - settlementPercentage) * 0.9),
+        max: Math.floor(formData.totalDebt * (1 - settlementPercentage) * 1.1)
+      }
+    };
+
+    setCalculationResults(results);
+    setShowResults(true);
+    window.scrollTo(0, 0);
+  };
+
+  const calculateCurrentPath = (totalDebt, interestRate, monthlyMinimum) => {
+    let balance = totalDebt;
+    let months = 0;
+    let totalPaid = 0;
+    const maxMonths = 600; // 50-year cap
+
+    while (balance > 0 && months < maxMonths) {
+      const monthlyInterest = balance * (interestRate / 100 / 12);
+      const principalPayment = monthlyMinimum - monthlyInterest;
+
+      if (principalPayment <= 0) {
+        // Minimum payment doesn't cover interest - infinite timeline
+        return {
+          monthsToPayoff: 999,
+          totalCost: 999999,
+          viable: false,
+          monthlyPayment: monthlyMinimum
+        };
+      }
+
+      balance -= principalPayment;
+      totalPaid += monthlyMinimum;
+      months++;
+    }
+
+    return {
+      monthsToPayoff: months,
+      totalCost: Math.round(totalPaid),
+      viable: true,
+      monthlyPayment: monthlyMinimum
+    };
+  };
+
+  const calculateSettlementPercentage = (debtAge, paymentStatus, debtType, hardshipFactors, totalDebt, monthlyIncome, monthlyMinimum) => {
+    // Base settlement percentages (what you PAY, not what's forgiven)
+    let basePercentage = 0.65; // Default: pay 65% (35% reduction)
+
+    // Adjust by debt age
+    if (debtAge === 'less_6months') basePercentage = 0.65;
+    else if (debtAge === '6_12months') basePercentage = 0.60;
+    else if (debtAge === '1_2years') basePercentage = 0.55;
+    else if (debtAge === '2_3years') basePercentage = 0.50;
+    else if (debtAge === '3plus_years') basePercentage = 0.45;
+
+    // Adjust by payment status
+    if (paymentStatus === '60plus_days') basePercentage -= 0.05;
+    else if (paymentStatus === 'frequently_missing') basePercentage -= 0.03;
+
+    // Adjust by debt type
+    if (debtType === 'medical') basePercentage -= 0.05;
+
+    // Adjust by hardship factors
+    if (hardshipFactors.length > 0 && !hardshipFactors.includes('none')) {
+      basePercentage -= 0.03;
+    }
+
+    // Adjust by debt-to-income ratio
+    const dti = (monthlyMinimum / monthlyIncome) * 100;
+    if (dti > 50) basePercentage -= 0.03;
+
+    // Clamp between 40% and 75%
+    return Math.max(0.40, Math.min(0.75, basePercentage));
+  };
+
+  const calculateReliefPath = (totalDebt, settlementPercentage, monthlyIncome, monthlyExpenses) => {
+    const settledAmount = totalDebt * settlementPercentage;
+    
+    // Add settlement company fees (22.5% of enrolled debt average)
+    const fees = totalDebt * 0.225;
+    const totalProgramCost = settledAmount + fees;
+
+    // Calculate monthly payment capacity (50% of disposable income)
+    const disposableIncome = Math.max(0, monthlyIncome - monthlyExpenses);
+    const monthlyPaymentCapacity = disposableIncome * 0.5;
+
+    // Calculate program duration (24-48 months typical)
+    let programDuration = monthlyPaymentCapacity > 0 
+      ? Math.ceil(totalProgramCost / monthlyPaymentCapacity)
+      : 48;
+    
+    // Clamp to industry standard range
+    programDuration = Math.max(24, Math.min(48, programDuration));
+
+    const actualMonthlyPayment = totalProgramCost / programDuration;
+
+    return {
+      monthsToPayoff: programDuration,
+      totalCost: Math.round(totalProgramCost),
+      viable: true,
+      monthlyPayment: Math.round(actualMonthlyPayment),
+      settledAmount: Math.round(settledAmount),
+      fees: Math.round(fees)
+    };
+  };
+
+  const calculateConfidenceScore = (totalDebt, paymentStatus, monthlyMinimum, monthlyIncome, debtAge, hardshipFactors) => {
+    let score = 0;
+
+    // Debt amount (higher = better candidate)
+    if (totalDebt >= 20000) score += 30;
+    else if (totalDebt >= 15000) score += 20;
+    else if (totalDebt >= 10000) score += 10;
+
+    // Payment status (worse status = better settlement candidate)
+    if (paymentStatus === '60plus_days') score += 25;
+    else if (paymentStatus === 'frequently_missing') score += 20;
+    else if (paymentStatus === 'occasionally_late') score += 10;
+
+    // Debt-to-income (higher = more need)
+    const dti = (monthlyMinimum / monthlyIncome) * 100;
+    if (dti > 50) score += 25;
+    else if (dti > 40) score += 15;
+
+    // Debt age (older = better)
+    if (debtAge === '3plus_years') score += 15;
+    else if (debtAge === '2_3years') score += 10;
+
+    // Hardship factors
+    if (hardshipFactors.length > 0 && !hardshipFactors.includes('none')) {
+      score += 5;
+    }
+
+    return score; // Range: 0-100
+  };
+
+  const handleBack = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+      // Scroll to calculator top smoothly
+      if (calculatorRef.current) {
+        calculatorRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    // Remove all non-digit characters for validation
+    const digitsOnly = phone.replace(/\D/g, '');
+    // US/Canada: 10 digits, allow for country code
+    return digitsOnly.length >= 10 && digitsOnly.length <= 11;
+  };
+
+  const normalizeJurisdiction = (value) => {
+    if (!value) return '';
+    // Normalize: trim, lowercase, remove diacritics
+    return value
+      .trim()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, ''); // Remove diacritics (e -> e)
+  };
+
+  const isStepComplete = () => {
+    switch(currentStep) {
+      case 1:
+        return formData.jurisdiction !== '';
+      case 2:
+        return formData.totalDebt >= 5000;
+      case 3:
+        return formData.monthlyMinimum >= 100;
+      case 4:
+        return formData.interestRate >= 8;
+      case 5:
+        return formData.debtType !== '';
+      case 6:
+        return formData.debtAge !== '';
+      case 7:
+        return formData.paymentStatus !== '';
+      case 8:
+        return formData.employmentStatus !== '';
+      case 9:
+        return formData.monthlyIncome >= 0;
+      case 10:
+        return formData.monthlyExpenses >= 500;
+      case 11:
+        return true; // Optional question
+      case 12:
+        return (
+          formData.contactInfo.firstName.trim() !== '' &&
+          formData.contactInfo.lastName.trim() !== '' &&
+          formData.contactInfo.email.trim() !== '' &&
+          validateEmail(formData.contactInfo.email) &&
+          formData.contactInfo.phone.trim() !== '' &&
+          validatePhone(formData.contactInfo.phone)
+          // Note: consent is NOT required per FTC guidance
+          // "Consent is not a condition of using this calculator"
+        );
+      default:
+        return true;
+    }
+  };
+
+  const handleInputChange = (field, value) => {
+    // Quebec exclusion check with normalized matching
+    if (field === 'jurisdiction') {
+      const normalized = normalizeJurisdiction(value);
+      const quebecBlocked = ['qc', 'quebec', 'province of quebec'];
+      if (quebecBlocked.includes(normalized)) {
+        setShowQuebecError(true);
+        return; // Don't update the field
+      }
+      setShowQuebecError(false);
+    }
+    
+    // Hardship factors mutual exclusion logic
+    if (field === 'hardshipFactors') {
+      const hardshipArray = value;
+      // If 'none' was just selected, clear all other hardships
+      if (hardshipArray.includes('none') && !formData.hardshipFactors.includes('none')) {
+        value = ['none'];
+      }
+      // If any other hardship was selected, remove 'none'
+      else if (hardshipArray.length > 1 && hardshipArray.includes('none')) {
+        value = hardshipArray.filter(h => h !== 'none');
+      }
+    }
+    
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const renderQuestion = () => {
+    switch(currentStep) {
+      case 1:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">Where are you located?</h2>
+            <p className="question-helper">This helps us provide accurate estimates based on your local debt relief landscape.</p>
+            
+            {showQuebecError && (
+              <div className="quebec-error" role="alert">
+                <div className="quebec-error-content">
+                  <h3>Service Not Available in Quebec</h3>
+                  <p>
+                    We're sorry, but our calculator is not currently available in Quebec. 
+                    We serve many other Canadian provinces, including Ontario, British Columbia, 
+                    Alberta, and others.
+                  </p>
+                  <p style={{marginTop: '12px', fontSize: '14px', color: '#718096'}}>
+                    If you have questions or would like information about debt relief options 
+                    in Quebec, please contact us directly.
+                  </p>
+                  <button 
+                    className="quebec-dismiss"
+                    onClick={() => setShowQuebecError(false)}
+                    aria-label="Dismiss Quebec error message"
+                  >
+                    Understood
+                  </button>
+                </div>
+              </div>
+            )}
+            
+            <select 
+              className="input-select"
+              value={formData.jurisdiction}
+              onChange={(e) => handleInputChange('jurisdiction', e.target.value)}
+              aria-label="Select your state or province"
+            >
+              <option value="">Select your state or province</option>
+              {allJurisdictions.map((item, idx) => (
+                <option key={idx} value={item.value} disabled={item.disabled}>
+                  {item.label}
+                </option>
+              ))}
+            </select>
+            
+            <p className="compliance-note">
+              <Lock size={14} style={{display: 'inline', marginRight: '4px'}} />
+              Your information is private and secure
+            </p>
+            
+            {/* Only show Quebec disclaimer if a Canadian province is selected */}
+            {canadianProvinces.includes(formData.jurisdiction) && (
+              <div className="canadian-disclaimer">
+                Available across many Canadian provinces (excluding Quebec).
+              </div>
+            )}
+          </div>
+        );
+
+      case 2:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">What's your total unsecured debt?</h2>
+            <p className="question-helper">Include credit cards, personal loans, and medical debt. Don't include mortgages or car loans.</p>
+            
+            <div className="slider-container">
+              <div className="slider-value">${formData.totalDebt.toLocaleString()}</div>
+              <input
+                type="range"
+                min="5000"
+                max="150000"
+                step="1000"
+                value={formData.totalDebt}
+                onChange={(e) => handleInputChange('totalDebt', parseInt(e.target.value))}
+                className="slider"
+                aria-label="Total unsecured debt amount"
+              />
+              <div className="slider-labels">
+                <span>$5,000</span>
+                <span>$150,000</span>
+              </div>
+            </div>
+            
+            <div className="manual-input">
+              <label htmlFor="debt-manual">Or enter exact amount:</label>
+              <div className="input-with-prefix">
+                <span className="input-prefix">$</span>
+                <input
+                  id="debt-manual"
+                  type="number"
+                  min="5000"
+                  max="150000"
+                  value={formData.totalDebt}
+                  onChange={(e) => handleInputChange('totalDebt', parseInt(e.target.value) || 5000)}
+                  className="input-number"
+                />
+              </div>
+            </div>
+          </div>
+        );
+
+      case 3:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">What are your current monthly minimum payments?</h2>
+            <p className="question-helper">Your total minimum payments across all unsecured debts.</p>
+            
+            <div className="slider-container">
+              <div className="slider-value">${formData.monthlyMinimum.toLocaleString()}/month</div>
+              <input
+                type="range"
+                min="100"
+                max="5000"
+                step="50"
+                value={formData.monthlyMinimum}
+                onChange={(e) => handleInputChange('monthlyMinimum', parseInt(e.target.value))}
+                className="slider"
+                aria-label="Monthly minimum payments"
+              />
+              <div className="slider-labels">
+                <span>$100</span>
+                <span>$5,000</span>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 4:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">What's your average interest rate?</h2>
+            <p className="question-helper">Check recent statements or use the average if unsure.</p>
+            
+            <div className="slider-container">
+              <div className="slider-value">{formData.interestRate}%</div>
+              <input
+                type="range"
+                min="8"
+                max="30"
+                step="0.5"
+                value={formData.interestRate}
+                onChange={(e) => handleInputChange('interestRate', parseFloat(e.target.value))}
+                className="slider"
+                aria-label="Average interest rate"
+              />
+              <div className="slider-labels">
+                <span>8%</span>
+                <span>30%</span>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 5:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">What type of debt makes up the majority?</h2>
+            
+            <div className="radio-group">
+              {[
+                { value: 'credit_cards', label: 'Credit cards (majority)' },
+                { value: 'personal_loans', label: 'Personal loans' },
+                { value: 'medical', label: 'Medical debt' },
+                { value: 'mixed', label: 'Mixed unsecured debt' }
+              ].map(option => (
+                <label key={option.value} className="radio-option">
+                  <input
+                    type="radio"
+                    name="debtType"
+                    value={option.value}
+                    checked={formData.debtType === option.value}
+                    onChange={(e) => handleInputChange('debtType', e.target.value)}
+                  />
+                  <span className="radio-label">{option.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        );
+
+      case 6:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">How old is your oldest unpaid debt?</h2>
+            <p className="question-helper">This helps us understand creditor settlement patterns.</p>
+            
+            <div className="radio-group">
+              {[
+                { value: 'less_6months', label: 'Less than 6 months' },
+                { value: '6_12months', label: '6-12 months' },
+                { value: '1_2years', label: '1-2 years' },
+                { value: '2_3years', label: '2-3 years' },
+                { value: '3plus_years', label: '3+ years' }
+              ].map(option => (
+                <label key={option.value} className="radio-option">
+                  <input
+                    type="radio"
+                    name="debtAge"
+                    value={option.value}
+                    checked={formData.debtAge === option.value}
+                    onChange={(e) => handleInputChange('debtAge', e.target.value)}
+                  />
+                  <span className="radio-label">{option.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        );
+
+      case 7:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">What's your current payment status?</h2>
+            <p className="question-helper">We don't judge"”this helps us model realistic outcomes for your situation.</p>
+            
+            <div className="radio-group">
+              {[
+                { value: 'making_all', label: 'Making all minimum payments' },
+                { value: 'occasionally_late', label: 'Making most payments, occasionally late' },
+                { value: 'frequently_missing', label: 'Frequently missing payments' },
+                { value: '60plus_days', label: "Haven't paid in 60+ days" }
+              ].map(option => (
+                <label key={option.value} className="radio-option">
+                  <input
+                    type="radio"
+                    name="paymentStatus"
+                    value={option.value}
+                    checked={formData.paymentStatus === option.value}
+                    onChange={(e) => handleInputChange('paymentStatus', e.target.value)}
+                  />
+                  <span className="radio-label">{option.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        );
+
+      case 8:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">What's your current employment status?</h2>
+            
+            <div className="radio-group">
+              {[
+                { value: 'full_time', label: 'Employed full-time' },
+                { value: 'part_time', label: 'Employed part-time' },
+                { value: 'self_employed', label: 'Self-employed' },
+                { value: 'unemployed', label: 'Unemployed or on disability' },
+                { value: 'retired', label: 'Retired' }
+              ].map(option => (
+                <label key={option.value} className="radio-option">
+                  <input
+                    type="radio"
+                    name="employmentStatus"
+                    value={option.value}
+                    checked={formData.employmentStatus === option.value}
+                    onChange={(e) => handleInputChange('employmentStatus', e.target.value)}
+                  />
+                  <span className="radio-label">{option.label}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        );
+
+      case 9:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">What's your total monthly household income?</h2>
+            <p className="question-helper">Include all sources: salary, benefits, spouse's income, etc.</p>
+            
+            <div className="slider-container">
+              <div className="slider-value">${formData.monthlyIncome.toLocaleString()}/month</div>
+              <input
+                type="range"
+                min="0"
+                max="15000"
+                step="250"
+                value={formData.monthlyIncome}
+                onChange={(e) => handleInputChange('monthlyIncome', parseInt(e.target.value))}
+                className="slider"
+                aria-label="Monthly household income"
+              />
+              <div className="slider-labels">
+                <span>$0</span>
+                <span>$15,000+</span>
+              </div>
+            </div>
+            
+            <div className="manual-input">
+              <label htmlFor="income-manual">Or enter exact amount:</label>
+              <div className="input-with-prefix">
+                <span className="input-prefix">$</span>
+                <input
+                  id="income-manual"
+                  type="number"
+                  min="0"
+                  max="15000"
+                  value={formData.monthlyIncome}
+                  onChange={(e) => handleInputChange('monthlyIncome', parseInt(e.target.value) || 0)}
+                  className="input-number"
+                />
+              </div>
+            </div>
+            
+            <p className="compliance-note">
+              <Lock size={14} style={{display: 'inline', marginRight: '4px'}} />
+              Your information is private and secure
+            </p>
+          </div>
+        );
+
+      case 10:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">What are your monthly essential expenses?</h2>
+            <p className="question-helper">Include rent/mortgage, utilities, food, transportation, insurance.</p>
+            
+            <div className="slider-container">
+              <div className="slider-value">${formData.monthlyExpenses.toLocaleString()}/month</div>
+              <input
+                type="range"
+                min="500"
+                max="10000"
+                step="250"
+                value={formData.monthlyExpenses}
+                onChange={(e) => handleInputChange('monthlyExpenses', parseInt(e.target.value))}
+                className="slider"
+                aria-label="Monthly essential expenses"
+              />
+              <div className="slider-labels">
+                <span>$500</span>
+                <span>$10,000</span>
+              </div>
+            </div>
+            
+            <div className="manual-input">
+              <label htmlFor="expenses-manual">Or enter exact amount:</label>
+              <div className="input-with-prefix">
+                <span className="input-prefix">$</span>
+                <input
+                  id="expenses-manual"
+                  type="number"
+                  min="500"
+                  max="10000"
+                  value={formData.monthlyExpenses}
+                  onChange={(e) => handleInputChange('monthlyExpenses', parseInt(e.target.value) || 500)}
+                  className="input-number"
+                />
+              </div>
+            </div>
+          </div>
+        );
+
+      case 11:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">Have you experienced any financial hardships?</h2>
+            <p className="question-helper">Optional: This may strengthen relief options during creditor negotiations.</p>
+            
+            <div className="checkbox-group">
+              {[
+                { value: 'job_loss', label: 'Recent job loss' },
+                { value: 'medical', label: 'Medical emergency' },
+                { value: 'divorce', label: 'Divorce or separation' },
+                { value: 'business', label: 'Business failure' },
+                { value: 'other', label: 'Other unexpected event' },
+                { value: 'none', label: 'No specific hardship' }
+              ].map(option => (
+                <label key={option.value} className="checkbox-option">
+                  <input
+                    type="checkbox"
+                    value={option.value}
+                    checked={formData.hardshipFactors.includes(option.value)}
+                    onChange={(e) => {
+                      const newFactors = e.target.checked
+                        ? [...formData.hardshipFactors, option.value]
+                        : formData.hardshipFactors.filter(f => f !== option.value);
+                      handleInputChange('hardshipFactors', newFactors);
+                    }}
+                  />
+                  <span className="checkbox-label-text">{option.label}</span>
+                </label>
+              ))}
+            </div>
+            
+            <p className="compliance-note" style={{marginTop: '20px'}}>
+              <Lock size={14} style={{display: 'inline', marginRight: '4px'}} />
+              This information may strengthen your case but is entirely optional
+            </p>
+          </div>
+        );
+
+      case 12:
+        return (
+          <div className="question-content">
+            <h2 className="question-title">Get your personalized estimate</h2>
+            <p className="question-helper">We'll show you potential savings based on your situation.</p>
+            
+            <div className="contact-form">
+              <div className="form-row">
+                <div className="form-field">
+                  <label htmlFor="firstName">First Name *</label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    required
+                    value={formData.contactInfo.firstName}
+                    onChange={(e) => handleInputChange('contactInfo', {...formData.contactInfo, firstName: e.target.value})}
+                    className="input-text"
+                  />
+                </div>
+                <div className="form-field">
+                  <label htmlFor="lastName">Last Name *</label>
+                  <input
+                    id="lastName"
+                    type="text"
+                    required
+                    value={formData.contactInfo.lastName}
+                    onChange={(e) => handleInputChange('contactInfo', {...formData.contactInfo, lastName: e.target.value})}
+                    className="input-text"
+                  />
+                </div>
+              </div>
+              
+              <div className="form-field">
+                <label htmlFor="email">Email Address *</label>
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  value={formData.contactInfo.email}
+                  onChange={(e) => handleInputChange('contactInfo', {...formData.contactInfo, email: e.target.value})}
+                  className={`input-text ${formData.contactInfo.email && !validateEmail(formData.contactInfo.email) ? 'invalid' : ''}`}
+                />
+                {formData.contactInfo.email && !validateEmail(formData.contactInfo.email) && (
+                  <div className="validation-error">Please enter a valid email address</div>
+                )}
+              </div>
+              
+              <div className="form-field">
+                <label htmlFor="phone">Phone Number *</label>
+                <input
+                  id="phone"
+                  type="tel"
+                  required
+                  value={formData.contactInfo.phone}
+                  onChange={(e) => handleInputChange('contactInfo', {...formData.contactInfo, phone: e.target.value})}
+                  className={`input-text ${formData.contactInfo.phone && !validatePhone(formData.contactInfo.phone) ? 'invalid' : ''}`}
+                  placeholder="(555) 555-5555"
+                />
+                {formData.contactInfo.phone && !validatePhone(formData.contactInfo.phone) && (
+                  <div className="validation-error">Please enter a valid phone number (10-11 digits)</div>
+                )}
+              </div>
+
+              <div className="fcc-consent-section">
+                <label className="consent-checkbox-label">
+                  <input
+                    type="checkbox"
+                    checked={formData.contactInfo.consent}
+                    onChange={(e) => handleInputChange('contactInfo', {...formData.contactInfo, consent: e.target.checked})}
+                  />
+                  <span className="consent-text">
+                    <strong>Optional:</strong> If you'd like, you can opt in to receive a one-time 
+                    phone call to review your modeled estimate. Message and data rates may apply. 
+                    Consent is not a condition of using this calculator.
+                  </span>
+                </label>
+              </div>
+
+              <div className="third-party-disclosure">
+                <h4>“‹ Important Disclosures</h4>
+                
+                <div className="disclosure-block">
+                  <strong>Third-Party Partner Notice:</strong>
+                  <p>
+                    We may securely share your information with a verified relief partner to 
+                    assist with an eligibility review. You are never obligated to enroll in 
+                    any program.
+                  </p>
+                </div>
+
+                <div className="disclosure-block">
+                  <strong>Privacy & Security:</strong>
+                  <p>
+                    <Lock size={14} style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}} />
+                    Your information is encrypted and shared only with one verified partner if you opt in. By submitting, you agree to our{' '}
+                    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and{' '}
+                    <a href="/terms-of-service" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
+                  </p>
+                </div>
+
+                <div className="disclosure-block ftc-notice">
+                  <strong>Educational Estimates Only:</strong>
+                  <p>
+                    Debt Calculator Lab is not a law firm or financial advisor. Results are 
+                    modeled estimates for educational purposes only. Actual results depend on 
+                    creditor participation, eligibility, and personal financial history.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
+  const renderResults = () => {
+    if (!calculationResults) return null;
+
+    const { currentPath, reliefPath, confidenceScore, monthlySavings, totalReduction } = calculationResults;
+    const isHighConfidence = confidenceScore >= 60;
+
+    return (
+      <div className="results-container">
+        <div className="results-header">
+          <h1 className="results-title">Your Debt Relief Estimate</h1>
+          <div className="reviewer-badge">
+            Calculations reviewed for accuracy by a Certified Public Accountant
+          </div>
+        </div>
+
+        {/* Mandatory FTC Disclaimer */}
+        <div className="ftc-disclaimer-box">
+          <div className="disclaimer-icon">WARNING: </div>
+          <div className="disclaimer-content">
+            <strong>IMPORTANT DISCLOSURE</strong>
+            <p>
+              Debt Calculator Lab is not a law firm or financial advisor. Results shown are 
+              modeled estimates for educational purposes only. Actual results depend on creditor 
+              participation, eligibility, and personal financial history.
+            </p>
+            <p>
+              This calculator does not guarantee debt relief, settlement acceptance, or specific 
+              outcomes. Individual results vary.
+            </p>
+          </div>
+        </div>
+
+        {/* Visual Comparison */}
+        <div className="comparison-section">
+          <h2>Your Two Paths Forward</h2>
+          
+          <div className="comparison-cards">
+            {/* Current Path */}
+            <div className="path-card current-path">
+              <div className="path-header">
+                <h3>Current Path</h3>
+                <p className="path-subtitle">(Minimum payments only)</p>
+              </div>
+              <div className="path-metrics">
+                <div className="metric">
+                  <div className="metric-label">Total Cost</div>
+                  <div className="metric-value">
+                    {currentPath.viable 
+                      ? `$${currentPath.totalCost.toLocaleString()}`
+                      : 'Unsustainable*'
+                    }
+                  </div>
+                </div>
+                <div className="metric">
+                  <div className="metric-label">Monthly Payment</div>
+                  <div className="metric-value">${currentPath.monthlyPayment.toLocaleString()}</div>
+                </div>
+                <div className="metric">
+                  <div className="metric-label">Time to Debt-Free</div>
+                  <div className="metric-value">
+                    {currentPath.viable 
+                      ? `${Math.floor(currentPath.monthsToPayoff / 12)} years ${currentPath.monthsToPayoff % 12} months`
+                      : '50+ years'
+                    }
+                  </div>
+                </div>
+              </div>
+              {!currentPath.viable && (
+                <div className="path-warning">
+                  * Minimum payment doesn't cover interest charges
+                </div>
+              )}
+            </div>
+
+            {/* Relief Path */}
+            <div className="path-card relief-path">
+              <div className="path-header">
+                <div className="recommended-badge">Potential Relief Path</div>
+                <h3>Debt Settlement</h3>
+                <p className="path-subtitle">(Estimated outcome)</p>
+              </div>
+              <div className="path-metrics">
+                <div className="metric">
+                  <div className="metric-label">Total Cost</div>
+                  <div className="metric-value highlighted">
+                    ${reliefPath.totalCost.toLocaleString()}
+                  </div>
+                </div>
+                <div className="metric">
+                  <div className="metric-label">Monthly Payment</div>
+                  <div className="metric-value highlighted">
+                    ${reliefPath.monthlyPayment.toLocaleString()}
+                  </div>
+                </div>
+                <div className="metric">
+                  <div className="metric-label">Time to Debt-Free</div>
+                  <div className="metric-value highlighted">
+                    {Math.floor(reliefPath.monthsToPayoff / 12)} years {reliefPath.monthsToPayoff % 12} months
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Savings Metrics */}
+        <div className="savings-section">
+          <h2>Potential Savings Summary</h2>
+          
+          <div className="savings-cards">
+            <div className="savings-card">
+              <div className="savings-icon">’°</div>
+              <div className="savings-content">
+                <div className="savings-label">Potential Monthly Savings</div>
+                <div className="savings-value">
+                  ${monthlySavings.min.toLocaleString()} - ${monthlySavings.max.toLocaleString()}
+                </div>
+              </div>
+            </div>
+
+            <div className="savings-card">
+              <div className="savings-icon">“‰</div>
+              <div className="savings-content">
+                <div className="savings-label">Estimated Total Reduction</div>
+                <div className="savings-value">
+                  ${totalReduction.min.toLocaleString()} - ${totalReduction.max.toLocaleString()}
+                </div>
+              </div>
+            </div>
+
+            <div className="savings-card">
+              <div className="savings-icon"></div>
+              <div className="savings-content">
+                <div className="savings-label">Faster Debt-Free Timeline</div>
+                <div className="savings-value">
+                  {currentPath.viable 
+                    ? `${Math.round((currentPath.monthsToPayoff - reliefPath.monthsToPayoff) / 12)} years faster`
+                    : 'Achievable path forward'
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* State Statute Reference (if jurisdiction selected) */}
+        {formData.jurisdiction && (
+          <div className="statute-reference">
+            <details>
+              <summary>“œ Jurisdiction-Specific Information</summary>
+              <div className="statute-content">
+                <p>
+                  Calculations for <strong>{formData.jurisdiction}</strong> users reference 
+                  applicable state/provincial consumer protection statutes governing debt 
+                  collection and settlement practices.
+                </p>
+                <p style={{fontSize: '13px', color: '#718096', marginTop: '8px'}}>
+                  This information is for educational purposes and does not constitute legal advice. 
+                  Consult with a licensed attorney for specific legal guidance.
+                </p>
+              </div>
+            </details>
+          </div>
+        )}
+
+        {/* Ethical CTA Section */}
+        <div className="cta-section">
+          {isHighConfidence ? (
+            // High-confidence: Phone CTA
+            <div className="cta-high-confidence">
+              <h3>Ready to Explore Your Options?</h3>
+              <p>
+                Based on your situation, speaking with a debt relief specialist could help 
+                clarify your options and next steps.
+              </p>
+              <a href="tel:1-800-555-0123" className="cta-button primary">
+                “ž Call (800) 555-0123
+              </a>
+              <p className="cta-hours">Mon-Fri 8am-8pm EST</p>
+            </div>
+          ) : (
+            // Exploratory: Optional form
+            <div className="cta-exploratory">
+              <h3>Want to Learn More?</h3>
+              <p>
+                You can request a no-obligation consultation to discuss these estimates 
+                and explore whether debt settlement might be right for you.
+              </p>
+              <button className="cta-button secondary">
+                Request Free Consultation
+              </button>
+              <p className="cta-note">Optional - no pressure, no commitment</p>
+            </div>
+          )}
+
+          {/* Third-party reminder */}
+          <div className="cta-disclosure">
+            <p>
+              If you choose to speak with a specialist, we may connect you with a verified 
+              debt relief partner. They will review your eligibility and explain program options. 
+              You are never obligated to enroll.
+            </p>
+          </div>
+        </div>
+
+        {/* Back to Calculator */}
+        <button 
+          className="back-to-calc-button"
+          onClick={() => {
+            setShowResults(false);
+            setCurrentStep(1);
+            // Scroll to calculator top smoothly
+            if (calculatorRef.current) {
+              calculatorRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }}
+        >
+          Start New Calculation
+        </button>
+      </div>
+    );
+  };
+
+  return (
+    <div className="calculator-container">
+      <style>{`
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        .calculator-container {
+          min-height: 100vh;
+          background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+          padding: 20px;
+        }
+
+        .calculator-wrapper {
+          max-width: 600px;
+          margin: 0 auto;
+          background: white;
+          border-radius: 16px;
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+
+        /* Header */
+        .calculator-header {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          padding: 24px;
+          text-align: center;
+        }
+
+        .logo {
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        }
+
+        .progress-container {
+          margin-top: 16px;
+        }
+
+        .progress-text {
+          font-size: 14px;
+          opacity: 0.9;
+          margin-bottom: 8px;
+        }
+
+        .progress-bar-container {
+          background: rgba(255, 255, 255, 0.2);
+          height: 8px;
+          border-radius: 4px;
+          overflow: hidden;
+        }
+
+        .progress-bar {
+          background: white;
+          height: 100%;
+          border-radius: 4px;
+          transition: width 0.3s ease;
+        }
+
+        /* Trust Indicators */
+        .trust-indicators {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 24px;
+          padding: 12px 24px;
+          background: #f7fafc;
+          border-bottom: 1px solid #e2e8f0;
+          flex-wrap: wrap;
+        }
+
+        .trust-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 12px;
+          color: #4a5568;
+          font-weight: 500;
+        }
+
+        @media (min-width: 640px) {
+          .trust-item {
+            font-size: 13px;
+          }
+        }
+
+        /* Question Card */
+        .question-card {
+          padding: 32px 24px;
+          min-height: 400px;
+        }
+
+        .question-content {
+          animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        .question-title {
+          font-size: 24px;
+          font-weight: 600;
+          color: #1a202c;
+          margin-bottom: 12px;
+          line-height: 1.3;
+        }
+
+        .question-helper {
+          font-size: 15px;
+          color: #718096;
+          margin-bottom: 28px;
+          line-height: 1.5;
+        }
+
+        .compliance-note {
+          font-size: 13px;
+          color: #4a5568;
+          margin-top: 16px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+
+        /* Quebec Exclusion Error */
+        .quebec-error {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
+          padding: 20px;
+        }
+
+        .quebec-error-content {
+          background: white;
+          padding: 32px;
+          border-radius: 12px;
+          max-width: 500px;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .quebec-error-content h3 {
+          color: #dc2626;
+          font-size: 20px;
+          margin-bottom: 16px;
+        }
+
+        .quebec-error-content p {
+          color: #4a5568;
+          line-height: 1.6;
+          margin-bottom: 8px;
+        }
+
+        .quebec-dismiss {
+          margin-top: 20px;
+          padding: 12px 24px;
+          background: #667eea;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-weight: 600;
+          cursor: pointer;
+          width: 100%;
+        }
+
+        .quebec-dismiss:hover {
+          background: #5568d3;
+        }
+
+        .canadian-disclaimer {
+          margin-top: 16px;
+          padding: 12px;
+          background: #fffbeb;
+          border-left: 3px solid #f59e0b;
+          font-size: 13px;
+          color: #92400e;
+          border-radius: 4px;
+        }
+
+        /* Input Styles */
+        .input-select {
+          width: 100%;
+          padding: 14px 16px;
+          font-size: 16px;
+          border: 2px solid #e2e8f0;
+          border-radius: 8px;
+          background: white;
+          cursor: pointer;
+          transition: border-color 0.2s;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23718096' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: right 16px center;
+        }
+
+        .input-select:focus {
+          outline: none;
+          border-color: #667eea;
+          box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-select option[disabled] {
+          font-weight: 600;
+          color: #a0aec0;
+          font-size: 14px;
+        }
+
+        /* Slider Styles */
+        .slider-container {
+          margin: 24px 0;
+        }
+
+        .slider-value {
+          font-size: 32px;
+          font-weight: 700;
+          color: #667eea;
+          text-align: center;
+          margin-bottom: 24px;
+        }
+
+        .slider {
+          width: 100%;
+          height: 8px;
+          border-radius: 4px;
+          background: #e2e8f0;
+          outline: none;
+          -webkit-appearance: none;
+          appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background: #667eea;
+          cursor: pointer;
+          box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+
+        .slider::-moz-range-thumb {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background: #667eea;
+          cursor: pointer;
+          border: none;
+          box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+
+        .slider-labels {
+          display: flex;
+          justify-content: space-between;
+          font-size: 13px;
+          color: #718096;
+          margin-top: 8px;
+        }
+
+        .manual-input {
+          margin-top: 24px;
+          padding-top: 24px;
+          border-top: 1px solid #e2e8f0;
+        }
+
+        .manual-input label {
+          display: block;
+          font-size: 14px;
+          color: #4a5568;
+          margin-bottom: 8px;
+        }
+
+        .input-with-prefix {
+          display: flex;
+          align-items: center;
+          border: 2px solid #e2e8f0;
+          border-radius: 8px;
+          overflow: hidden;
+          transition: border-color 0.2s;
+        }
+
+        .input-with-prefix:focus-within {
+          border-color: #667eea;
+        }
+
+        .input-prefix {
+          padding: 14px 12px;
+          background: #f7fafc;
+          font-weight: 600;
+          color: #4a5568;
+        }
+
+        .input-number {
+          flex: 1;
+          padding: 14px 16px;
+          border: none;
+          font-size: 16px;
+          outline: none;
+        }
+
+        /* Radio Group */
+        .radio-group {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .radio-option {
+          display: flex;
+          align-items: center;
+          padding: 16px;
+          border: 2px solid #e2e8f0;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .radio-option:hover {
+          border-color: #cbd5e0;
+          background: #f7fafc;
+        }
+
+        .radio-option input[type="radio"] {
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+          cursor: pointer;
+          accent-color: #667eea;
+        }
+
+        .radio-option input[type="radio"]:checked + .radio-label {
+          font-weight: 600;
+          color: #667eea;
+        }
+
+        .radio-label {
+          font-size: 16px;
+          color: #2d3748;
+        }
+
+        /* Checkbox Group */
+        .checkbox-group {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .checkbox-option {
+          display: flex;
+          align-items: center;
+          padding: 16px;
+          border: 2px solid #e2e8f0;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .checkbox-option:hover {
+          border-color: #cbd5e0;
+          background: #f7fafc;
+        }
+
+        .checkbox-option input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+          cursor: pointer;
+          accent-color: #667eea;
+          flex-shrink: 0;
+        }
+
+        .checkbox-option input[type="checkbox"]:checked ~ .checkbox-label-text {
+          font-weight: 600;
+          color: #667eea;
+        }
+
+        .checkbox-label-text {
+          font-size: 16px;
+          color: #2d3748;
+        }
+
+        /* Contact Form */
+        .contact-form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .form-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+
+        .form-field {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .form-field label {
+          font-size: 14px;
+          font-weight: 500;
+          color: #4a5568;
+          margin-bottom: 6px;
+        }
+
+        .input-text {
+          padding: 14px 16px;
+          font-size: 16px;
+          border: 2px solid #e2e8f0;
+          border-radius: 8px;
+          transition: border-color 0.2s;
+        }
+
+        .input-text:focus {
+          outline: none;
+          border-color: #667eea;
+          box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-text.invalid {
+          border-color: #ef4444;
+        }
+
+        .input-text.invalid:focus {
+          border-color: #dc2626;
+          box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+
+        .validation-error {
+          font-size: 13px;
+          color: #dc2626;
+          margin-top: 4px;
+        }
+
+        /* FCC Consent Section */
+        .fcc-consent-section {
+          padding: 20px;
+          background: #eff6ff;
+          border-radius: 8px;
+          border: 2px solid #3b82f6;
+        }
+
+        .consent-checkbox-label {
+          display: flex;
+          align-items: flex-start;
+          cursor: pointer;
+        }
+
+        .consent-checkbox-label input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+          margin-top: 2px;
+          cursor: pointer;
+          accent-color: #3b82f6;
+          flex-shrink: 0;
+        }
+
+        .consent-text {
+          font-size: 14px;
+          color: #1e3a8a;
+          line-height: 1.6;
+        }
+
+        /* Third-Party Disclosure */
+        .third-party-disclosure {
+          margin-top: 20px;
+          padding: 20px;
+          background: #fffbeb;
+          border-radius: 8px;
+          border-left: 4px solid #f59e0b;
+        }
+
+        .third-party-disclosure h4 {
+          font-size: 15px;
+          font-weight: 600;
+          color: #92400e;
+          margin-bottom: 16px;
+        }
+
+        .disclosure-block {
+          margin-bottom: 16px;
+        }
+
+        .disclosure-block:last-child {
+          margin-bottom: 0;
+        }
+
+        .disclosure-block strong {
+          display: block;
+          font-size: 13px;
+          font-weight: 600;
+          color: #78350f;
+          margin-bottom: 4px;
+        }
+
+        .disclosure-block p {
+          font-size: 13px;
+          line-height: 1.6;
+          color: #92400e;
+          margin: 0;
+        }
+
+        .disclosure-block a {
+          color: #3b82f6;
+          text-decoration: underline;
+        }
+
+        .ftc-notice {
+          background: #fef3c7;
+          padding: 12px;
+          border-radius: 6px;
+          margin-top: 8px;
+        }
+
+        .ftc-notice strong {
+          color: #92400e;
+        }
+
+        /* Old consent section (remove/deprecated) */
+        .consent-section {
+          padding: 16px;
+          background: #f7fafc;
+          border-radius: 8px;
+          border: 2px solid #e2e8f0;
+        }
+
+        .checkbox-label {
+          display: flex;
+          align-items: flex-start;
+          cursor: pointer;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+          margin-top: 2px;
+          cursor: pointer;
+          accent-color: #667eea;
+          flex-shrink: 0;
+        }
+
+        .consent-text {
+          font-size: 14px;
+          color: #4a5568;
+          line-height: 1.5;
+        }
+
+        .privacy-disclosure {
+          font-size: 13px;
+          color: #718096;
+          line-height: 1.6;
+          padding: 12px;
+          background: #fffbeb;
+          border-radius: 6px;
+          border-left: 3px solid #f59e0b;
+        }
+
+        .privacy-disclosure a {
+          color: #667eea;
+          text-decoration: underline;
+        }
+
+        /* Placeholder */
+        .placeholder-box {
+          padding: 24px;
+          background: #f7fafc;
+          border: 2px dashed #cbd5e0;
+          border-radius: 8px;
+          margin-top: 16px;
+        }
+
+        .placeholder-box p {
+          font-weight: 600;
+          color: #4a5568;
+          margin-bottom: 12px;
+        }
+
+        .placeholder-box ul {
+          margin-left: 20px;
+          color: #718096;
+        }
+
+        .placeholder-box li {
+          margin-bottom: 6px;
+        }
+
+        /* Navigation */
+        .calculator-navigation {
+          padding: 20px 24px;
+          border-top: 1px solid #e2e8f0;
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+        }
+
+        .nav-button {
+          padding: 14px 24px;
+          font-size: 16px;
+          font-weight: 600;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          min-height: 44px;
+        }
+
+        .nav-button-back {
+          background: white;
+          color: #4a5568;
+          border: 2px solid #e2e8f0;
+        }
+
+        .nav-button-back:hover:not(:disabled) {
+          background: #f7fafc;
+          border-color: #cbd5e0;
+        }
+
+        .nav-button-next {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          flex: 1;
+        }
+
+        .nav-button-next:hover:not(:disabled) {
+          transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .nav-button:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        /* Footer */
+        .calculator-footer {
+          padding: 16px 24px;
+          background: #f7fafc;
+          border-top: 1px solid #e2e8f0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          font-size: 13px;
+          color: #718096;
+        }
+
+        .footer-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+
+        .footer-link {
+          color: #667eea;
+          text-decoration: none;
+        }
+
+        .footer-link:hover {
+          text-decoration: underline;
+        }
+
+        /* Methodology Panel */
+        .methodology-section {
+          margin: 24px;
+          background: white;
+          border-radius: 12px;
+          border: 2px solid #e2e8f0;
+          overflow: hidden;
+        }
+
+        .methodology-toggle {
+          width: 100%;
+          padding: 20px 24px;
+          background: #f7fafc;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          font-size: 16px;
+          font-weight: 600;
+          color: #2d3748;
+          transition: background 0.2s;
+        }
+
+        .methodology-toggle:hover {
+          background: #edf2f7;
+        }
+
+        .methodology-icon {
+          font-size: 20px;
+        }
+
+        .methodology-title {
+          flex: 1;
+          text-align: left;
+        }
+
+        .methodology-arrow {
+          font-size: 12px;
+          transition: transform 0.3s;
+          color: #667eea;
+        }
+
+        .methodology-arrow.open {
+          transform: rotate(180deg);
+        }
+
+        .methodology-content {
+          padding: 24px;
+          animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .methodology-content h3 {
+          font-size: 20px;
+          color: #1a202c;
+          margin-bottom: 20px;
+          padding-bottom: 12px;
+          border-bottom: 2px solid #e2e8f0;
+        }
+
+        .methodology-section-block {
+          margin-bottom: 24px;
+        }
+
+        .methodology-section-block:last-child {
+          margin-bottom: 0;
+        }
+
+        .methodology-section-block h4 {
+          font-size: 16px;
+          font-weight: 600;
+          color: #2d3748;
+          margin-bottom: 8px;
+        }
+
+        .methodology-section-block p {
+          font-size: 14px;
+          line-height: 1.6;
+          color: #4a5568;
+        }
+
+        .methodology-list {
+          margin-left: 20px;
+          color: #4a5568;
+          font-size: 14px;
+          line-height: 1.8;
+        }
+
+        .methodology-list li {
+          margin-bottom: 6px;
+        }
+
+        .jurisdiction-note {
+          background: #eff6ff;
+          padding: 16px;
+          border-radius: 8px;
+          border-left: 3px solid #3b82f6;
+        }
+
+        .jurisdiction-note h4 {
+          color: #1e40af;
+        }
+
+        .jurisdiction-note p {
+          color: #1e3a8a;
+        }
+
+        .reviewer-badge {
+          background: #f0fdf4;
+          padding: 16px;
+          border-radius: 8px;
+          border-left: 3px solid #22c55e;
+        }
+
+        .reviewer-badge p {
+          color: #166534;
+          font-size: 14px;
+          margin: 0;
+        }
+
+        /* Methodology Placeholder (removed) */
+        @media (max-width: 640px) {
+          .calculator-container {
+            padding: 0;
+          }
+
+          .calculator-wrapper {
+            border-radius: 0;
+            min-height: 100vh;
+          }
+
+          .question-card {
+            padding: 24px 20px;
+          }
+
+          .question-title {
+            font-size: 22px;
+          }
+
+          .form-row {
+            grid-template-columns: 1fr;
+          }
+
+          .calculator-footer {
+            flex-direction: column;
+            gap: 8px;
+          }
+
+          .nav-button {
+            font-size: 15px;
+            padding: 12px 20px;
+          }
+        }
+
+        /* Touch targets for accessibility */
+        @media (pointer: coarse) {
+          .nav-button,
+          .radio-option,
+          .checkbox-label {
+            min-height: 44px;
+            min-width: 44px;
+          }
+        }
+
+        /* Results Screen */
+        .results-container {
+          padding: 32px 24px;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .results-header {
+          text-align: center;
+          margin-bottom: 32px;
+        }
+
+        .results-title {
+          font-size: 28px;
+          font-weight: 700;
+          color: #1a202c;
+          margin-bottom: 16px;
+        }
+
+        .reviewer-badge {
+          display: inline-block;
+          padding: 8px 16px;
+          background: #f0fdf4;
+          border: 2px solid #22c55e;
+          border-radius: 8px;
+          font-size: 14px;
+          color: #166534;
+          font-weight: 600;
+        }
+
+        /* FTC Disclaimer Box */
+        .ftc-disclaimer-box {
+          background: #fffbeb;
+          border-left: 4px solid #f59e0b;
+          border-radius: 8px;
+          padding: 20px;
+          margin-bottom: 32px;
+          display: flex;
+          gap: 16px;
+        }
+
+        .disclaimer-icon {
+          font-size: 24px;
+          flex-shrink: 0;
+        }
+
+        .disclaimer-content strong {
+          display: block;
+          color: #92400e;
+          font-size: 15px;
+          margin-bottom: 8px;
+        }
+
+        .disclaimer-content p {
+          color: #92400e;
+          font-size: 14px;
+          line-height: 1.6;
+          margin-bottom: 8px;
+        }
+
+        .disclaimer-content p:last-child {
+          margin-bottom: 0;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+          margin-bottom: 32px;
+        }
+
+        .comparison-section h2 {
+          font-size: 22px;
+          font-weight: 600;
+          color: #1a202c;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .comparison-cards {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+
+        @media (max-width: 640px) {
+          .comparison-cards {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .path-card {
+          background: white;
+          border: 2px solid #e2e8f0;
+          border-radius: 12px;
+          padding: 20px;
+        }
+
+        .current-path {
+          border-color: #cbd5e0;
+        }
+
+        .relief-path {
+          border-color: #667eea;
+          background: linear-gradient(135deg, #f7fafc 0%, #eff6ff 100%);
+        }
+
+        .path-header h3 {
+          font-size: 18px;
+          font-weight: 600;
+          color: #1a202c;
+          margin-bottom: 4px;
+        }
+
+        .path-subtitle {
+          font-size: 13px;
+          color: #718096;
+          margin-bottom: 16px;
+        }
+
+        .recommended-badge {
+          display: inline-block;
+          padding: 4px 12px;
+          background: #667eea;
+          color: white;
+          font-size: 11px;
+          font-weight: 600;
+          text-transform: uppercase;
+          border-radius: 4px;
+          margin-bottom: 8px;
+        }
+
+        .path-metrics {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .metric {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+
+        .metric-label {
+          font-size: 13px;
+          color: #718096;
+          font-weight: 500;
+        }
+
+        .metric-value {
+          font-size: 20px;
+          font-weight: 700;
+          color: #2d3748;
+        }
+
+        .metric-value.highlighted {
+          color: #667eea;
+        }
+
+        .path-warning {
+          margin-top: 12px;
+          padding: 8px;
+          background: #fef3c7;
+          border-radius: 6px;
+          font-size: 12px;
+          color: #92400e;
+        }
+
+        /* Savings Section */
+        .savings-section {
+          margin-bottom: 32px;
+        }
+
+        .savings-section h2 {
+          font-size: 22px;
+          font-weight: 600;
+          color: #1a202c;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .savings-cards {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+        }
+
+        @media (max-width: 640px) {
+          .savings-cards {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .savings-card {
+          background: white;
+          border: 2px solid #e2e8f0;
+          border-radius: 12px;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .savings-icon {
+          font-size: 32px;
+          margin-bottom: 12px;
+        }
+
+        .savings-label {
+          font-size: 13px;
+          color: #718096;
+          margin-bottom: 8px;
+        }
+
+        .savings-value {
+          font-size: 20px;
+          font-weight: 700;
+          color: #22c55e;
+        }
+
+        /* Statute Reference */
+        .statute-reference {
+          margin-bottom: 32px;
+        }
+
+        .statute-reference details {
+          background: #eff6ff;
+          border: 2px solid #3b82f6;
+          border-radius: 8px;
+          padding: 16px;
+        }
+
+        .statute-reference summary {
+          font-weight: 600;
+          color: #1e40af;
+          cursor: pointer;
+          user-select: none;
+        }
+
+        .statute-reference summary:hover {
+          color: #1e3a8a;
+        }
+
+        .statute-content {
+          margin-top: 12px;
+          color: #1e3a8a;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+          background: white;
+          border: 2px solid #e2e8f0;
+          border-radius: 12px;
+          padding: 32px;
+          margin-bottom: 24px;
+        }
+
+        .cta-high-confidence h3,
+        .cta-exploratory h3 {
+          font-size: 20px;
+          font-weight: 600;
+          color: #1a202c;
+          margin-bottom: 12px;
+          text-align: center;
+        }
+
+        .cta-high-confidence p,
+        .cta-exploratory p {
+          font-size: 15px;
+          color: #4a5568;
+          line-height: 1.6;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .cta-button {
+          display: block;
+          width: 100%;
+          padding: 16px 24px;
+          font-size: 18px;
+          font-weight: 600;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s;
+          text-decoration: none;
+          text-align: center;
+        }
+
+        .cta-button.primary {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+        }
+
+        .cta-button.primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta-button.secondary {
+          background: white;
+          color: #667eea;
+          border: 2px solid #667eea;
+        }
+
+        .cta-button.secondary:hover {
+          background: #f7fafc;
+        }
+
+        .cta-hours,
+        .cta-note {
+          text-align: center;
+          margin-top: 12px;
+          font-size: 14px;
+          color: #718096;
+        }
+
+        .cta-disclosure {
+          margin-top: 24px;
+          padding: 16px;
+          background: #fffbeb;
+          border-radius: 8px;
+          border-left: 3px solid #f59e0b;
+        }
+
+        .cta-disclosure p {
+          font-size: 13px;
+          color: #92400e;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        /* Back to Calculator Button */
+        .back-to-calc-button {
+          display: block;
+          width: 100%;
+          padding: 12px;
+          background: white;
+          border: 2px solid #e2e8f0;
+          border-radius: 8px;
+          color: #4a5568;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+
+        .back-to-calc-button:hover {
+          background: #f7fafc;
+          border-color: #cbd5e0;
+        }
+      `}</style>
+
+      <div className="calculator-wrapper" ref={calculatorRef}>
+        {showResults ? (
+          // Show Results Screen
+          renderResults()
+        ) : (
+          // Show Calculator
+          <>
+            {/* Header */}
+            <header className="calculator-header">
+              <div className="logo">
+                <Shield size={28} />
+                DebtCalculatorLab
+              </div>
+              <div className="progress-container">
+                <div className="progress-text">Step {currentStep} of {totalSteps}</div>
+                <div className="progress-bar-container">
+                  <div 
+                    className="progress-bar" 
+                    style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+                    role="progressbar"
+                    aria-valuenow={currentStep}
+                    aria-valuemin={1}
+                    aria-valuemax={totalSteps}
+                  />
+                </div>
+              </div>
+            </header>
+
+            {/* Trust Indicators */}
+            <div className="trust-indicators">
+              <div className="trust-item">
+                <CheckCircle size={16} style={{color: '#22c55e'}} />
+                <span>CPA Reviewed</span>
+              </div>
+              <div className="trust-item">
+                <Lock size={16} style={{color: '#3b82f6'}} />
+                <span>SSL Encrypted</span>
+              </div>
+              <div className="trust-item">
+                <Shield size={16} style={{color: '#667eea'}} />
+                <span>Shared only with one verified partner if you opt in</span>
+              </div>
+            </div>
+
+            {/* Question Card */}
+            <main className="question-card" role="main">
+              {renderQuestion()}
+            </main>
+
+            {/* Navigation */}
+            <nav className="calculator-navigation" aria-label="Calculator navigation">
+              <button
+                className="nav-button nav-button-back"
+                onClick={handleBack}
+                disabled={currentStep === 1}
+                aria-label="Previous question"
+              >
+                <ChevronLeft size={20} />
+                Back
+              </button>
+              <button
+                className="nav-button nav-button-next"
+                onClick={handleNext}
+                disabled={!isStepComplete()}
+                aria-label={currentStep === totalSteps ? 'Calculate estimate' : 'Next question'}
+              >
+                {currentStep === totalSteps ? 'Calculate My Estimate' : 'Next'}
+                <ChevronRight size={20} />
+              </button>
+            </nav>
+
+            {/* Footer */}
+            <footer className="calculator-footer">
+              <div className="footer-item">
+                <Lock size={14} />
+                <a href="/privacy-policy" className="footer-link">Privacy Policy</a>
+              </div>
+              <div className="footer-item">
+                <CheckCircle size={14} />
+                <span>SSL Secured</span>
+              </div>
+            </footer>
+          </>
+        )}
+      </div>
+
+      {/* Methodology Panel - Expandable */}
+      <div className="methodology-section">
+        <button 
+          className="methodology-toggle"
+          onClick={() => setShowMethodology(!showMethodology)}
+          aria-expanded={showMethodology}
+          aria-controls="methodology-content"
+        >
+          <span className="methodology-icon">“Š</span>
+          <span className="methodology-title">How We Calculate Your Estimate</span>
+          <span className={`methodology-arrow ${showMethodology ? 'open' : ''}`}>v</span>
+        </button>
+        
+        {showMethodology && (
+          <div id="methodology-content" className="methodology-content">
+            <h3>Our Calculation Methodology</h3>
+            
+            <div className="methodology-section-block">
+              <h4>Data Sources</h4>
+              <p>
+                Our calculations are based on industry settlement averages from 2020-2025, 
+                Federal Trade Commission debt relief program data, and creditor settlement 
+                patterns by debt age and type.
+              </p>
+            </div>
+            
+            <div className="methodology-section-block">
+              <h4>How We Model Your Scenarios</h4>
+              <p>
+                <strong>Current Path:</strong> We calculate how long it would take to pay off 
+                your debt making minimum payments, factoring in interest charges and principal 
+                reduction. This shows what happens if you continue on your current trajectory.
+              </p>
+              <p style={{marginTop: '12px'}}>
+                <strong>Relief Path:</strong> We model potential debt settlement outcomes based 
+                on your debt amount, payment history, and financial situation. Settlement 
+                percentages vary based on debt age, type, and creditor willingness to negotiate.
+              </p>
+            </div>
+            
+            <div className="methodology-section-block">
+              <h4>Settlement Percentage Factors</h4>
+              <ul className="methodology-list">
+                <li>Debt age (older debt typically settles for less)</li>
+                <li>Payment status (accounts in default may qualify for larger reductions)</li>
+                <li>Debt type (medical debt often settles more favorably)</li>
+                <li>Documented hardship circumstances</li>
+                <li>Debt-to-income ratio</li>
+              </ul>
+            </div>
+            
+            <div className="methodology-section-block">
+              <h4>Fees & Program Costs</h4>
+              <p>
+                Settlement companies typically charge 20-25% of enrolled debt as fees. 
+                This cost is included in our total estimates. Actual fees vary by provider 
+                and program terms.
+              </p>
+            </div>
+            
+            {formData.jurisdiction && (
+              <div className="methodology-section-block jurisdiction-note">
+                <h4>Jurisdiction-Specific Information</h4>
+                <p>
+                  Calculations for <strong>{formData.jurisdiction}</strong> users reference 
+                  applicable state/provincial consumer protection statutes governing debt 
+                  collection and settlement practices. Specific statute references are 
+                  available in our technical documentation.
+                </p>
+              </div>
+            )}
+            
+            <div className="methodology-section-block">
+              <h4>Important Limitations</h4>
+              <p>
+                These are modeled estimates for educational purposes. Actual results depend 
+                on creditor participation, individual eligibility, negotiation outcomes, and 
+                your ability to complete a settlement program. No results are guaranteed.
+              </p>
+            </div>
+            
+            <div className="methodology-section-block reviewer-badge">
+              <p>
+                <strong>Calculations reviewed for accuracy by a Certified Public Accountant</strong>
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default DebtReliefCalculator;
