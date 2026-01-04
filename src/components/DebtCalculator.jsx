@@ -840,8 +840,8 @@ const DebtReliefCalculator = () => {
                   <p>
                     <Lock size={14} style={{display: 'inline', marginRight: '6px', verticalAlign: 'middle'}} />
                     Your information is encrypted and shared only with one verified partner if you opt in. By submitting, you agree to our{' '}
-                    <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and{' '}
-                    <a href="/terms-of-service" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
+                    <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and{' '}
+                    <a href="/terms-of-service/" target="_blank" rel="noopener noreferrer">Terms of Service</a>.
                   </p>
                 </div>
 
@@ -2372,7 +2372,7 @@ const DebtReliefCalculator = () => {
             <footer className="calculator-footer">
               <div className="footer-item">
                 <Lock size={14} />
-                <a href="/privacy-policy" className="footer-link">Privacy Policy</a>
+                <a href="/privacy-policy/" className="footer-link">Privacy Policy</a>
               </div>
               <div className="footer-item">
                 <CheckCircle size={14} />

@@ -432,7 +432,7 @@ const StatePage = ({ stateData }) => {
 
       {/* Page Header */}
       <header className="page-header">
-        <h1>Debt Relief Calculator -” {stateName}</h1>
+        <h1>Debt Relief Calculator - {stateName}</h1>
         <div className="reviewer-badge">
           Calculations reviewed for accuracy by a Certified Public Accountant
         </div>

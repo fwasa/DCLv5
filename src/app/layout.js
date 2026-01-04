@@ -1,4 +1,4 @@
-import GoogleAnalytics from '@/components/GoogleAnalytics';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'DebtCalculatorLab - Educational Debt Relief Calculators',
@@ -7,16 +7,28 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // Replace with your actual GA4 Measurement ID
-  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
-
   return (
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
       </head>
-      <body>{children}</body>
+      <body>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K8DM171YNM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K8DM171YNM');
+          `}
+        </Script>
+        
+        {children}
+      </body>
     </html>
   );
 }

@@ -726,7 +726,7 @@ const NationalToolPage = () => {
               {canadianProvinces.map(province => (
                 <a 
                   key={province}
-                  href={`/debt-relief-calculator/canada/${province.toLowerCase().replace(/\s+/g, '-')}/`}
+                  href={`/debt-relief-calculator/${province.toLowerCase().replace(/\s+/g, '-')}/`}
                   className="state-link"
                 >
                   {province}
@@ -767,7 +767,7 @@ const NationalToolPage = () => {
             <a href="/debt-calculators/" className="footer-link">All Calculators</a>
             <a href="/privacy-policy/" className="footer-link">Privacy Policy</a>
             <a href="/terms-of-service/" className="footer-link">Terms of Service</a>
-            <a href="/how-we-calculate/" className="footer-link">Methodology</a>
+            <a href="/methodology/" className="footer-link">Methodology</a>
             <a href="/about/" className="footer-link">About</a>
           </div>
         </div>

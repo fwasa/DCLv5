@@ -561,7 +561,7 @@ const PillarPageDebtCalculators = () => {
 
       {/* Main Content */}
       <main className="page-content">
-        <h1>Debt Calculators -” Understand Your Options</h1>
+        <h1>Debt Calculators - Understand Your Options</h1>
 
         <p className="intro-text">
           Explore educational debt analysis tools designed to help you model potential debt relief 
@@ -876,7 +876,6 @@ const PillarPageDebtCalculators = () => {
               <h4>Company</h4>
               <a href="/about/" className="footer-link">About</a>
               <a href="/methodology/" className="footer-link">How We Calculate</a>
-              <a href="/reviewers/" className="footer-link">Our Reviewers</a>
             </div>
 
             <div className="footer-column">
