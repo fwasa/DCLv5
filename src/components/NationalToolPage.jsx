@@ -491,7 +491,7 @@ const NationalToolPage = () => {
       <div className="breadcrumb">
         <nav className="breadcrumb-nav" aria-label="Breadcrumb">
           <a href="/debt-calculators/" className="breadcrumb-link">Debt Calculators</a>
-          <span className="breadcrumb-separator">></span>
+          <span className="breadcrumb-separator">&gt;</span>
           <span className="breadcrumb-current">Debt Relief Calculator</span>
         </nav>
       </div>

@@ -1,0 +1,20 @@
+{
+  "name": "DebtCalculatorLab",
+  "short_name": "DCL",
+  "description": "Educational debt relief calculators reviewed by a CPA",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#667eea",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

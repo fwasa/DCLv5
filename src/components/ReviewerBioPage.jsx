@@ -408,9 +408,9 @@ const ReviewerBioPage = () => {
       <div className="breadcrumb">
         <nav className="breadcrumb-nav" aria-label="Breadcrumb">
           <a href="/debt-calculators/" className="breadcrumb-link">Debt Calculators</a>
-          <span className="breadcrumb-separator">></span>
+          <span className="breadcrumb-separator">&gt;</span>
           <a href="/reviewers/" className="breadcrumb-link">Our Reviewers</a>
-          <span className="breadcrumb-separator">></span>
+          <span className="breadcrumb-separator">&gt;</span>
           <span>{reviewer.name}</span>
         </nav>
       </div>
