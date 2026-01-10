@@ -106,14 +106,20 @@ const DebtReliefCalculator = () => {
       formData.hardshipFactors
     );
 
+    // Calculate monthly payment difference (positive = savings, negative = increase)
+    const monthlyDifference = formData.monthlyMinimum - reliefPath.monthlyPayment;
+    const hasMonthlySavings = monthlyDifference > 0;
+    
     const results = {
       currentPath,
       reliefPath,
       settlementPercentage,
       confidenceScore,
       monthlySavings: {
-        min: Math.max(0, formData.monthlyMinimum - reliefPath.monthlyPayment - 50),
-        max: Math.max(0, formData.monthlyMinimum - reliefPath.monthlyPayment + 50)
+        min: hasMonthlySavings ? Math.max(0, monthlyDifference - 50) : 0,
+        max: hasMonthlySavings ? monthlyDifference + 50 : 0,
+        isIncrease: !hasMonthlySavings,
+        increaseAmount: hasMonthlySavings ? 0 : Math.abs(monthlyDifference)
       },
       totalReduction: {
         min: Math.floor(formData.totalDebt * (1 - settlementPercentage) * 0.9),
@@ -976,10 +982,23 @@ const DebtReliefCalculator = () => {
             <div className="savings-card">
               <div className="savings-icon"></div>
               <div className="savings-content">
-                <div className="savings-label">Potential Monthly Savings</div>
-                <div className="savings-value">
-                  ${monthlySavings.min.toLocaleString()} - ${monthlySavings.max.toLocaleString()}
+                <div className="savings-label">
+                  {monthlySavings.isIncrease ? 'Monthly Payment Increase' : 'Potential Monthly Savings'}
                 </div>
+                <div className="savings-value" style={monthlySavings.isIncrease ? {color: '#f59e0b'} : {}}>
+                  {monthlySavings.isIncrease ? (
+                    <>+${Math.round(monthlySavings.increaseAmount).toLocaleString()}</>
+                  ) : (
+                    monthlySavings.min === 0 && monthlySavings.max === 0 
+                      ? 'Similar payment'
+                      : `$${monthlySavings.min.toLocaleString()} - $${monthlySavings.max.toLocaleString()}`
+                  )}
+                </div>
+                {monthlySavings.isIncrease && (
+                  <div className="savings-note" style={{ fontSize: '13px', marginTop: '8px', color: '#64748b' }}>
+                    Higher monthly payment, but much lower total cost and faster debt-free
+                  </div>
+                )}
               </div>
             </div>
 
