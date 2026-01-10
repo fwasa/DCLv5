@@ -98,7 +98,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Maine?",
-        answer: "Debt settlement in Maine operates through negotiations with creditors to accept reduced balances, regulated under Maine consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Maine law prohibits unfair and deceptive practices through the Maine Unfair Trade Practices Act (5 M.R.S. §207). Maine also regulates debt collectors and requires compliance with state and federal laws. Maine has specific requirements for debt buyer licensing and disclosure. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Maine residents."
+        answer: "Debt settlement in Maine operates through negotiations with creditors to accept reduced balances, regulated under Maine consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Maine law prohibits unfair and deceptive practices through the Maine Unfair Trade Practices Act (5 M.R.S. 207). Maine also regulates debt collectors and requires compliance with state and federal laws. Maine has specific requirements for debt buyer licensing and disclosure. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Maine residents."
       },
       {
         question: "How long does debt settlement take in Maine?",
@@ -106,7 +106,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Maine provide for consumers in debt?",
-        answer: "Maine provides strong consumer protections through the Maine Unfair Trade Practices Act (5 M.R.S. §207) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Maine residents, prohibiting harassment, threats, and false statements. Maine law requires debt buyers to be licensed and follow specific disclosure requirements. Maine has strict rules governing debt collection conduct and validation requirements. Maine courts require proper documentation in debt collection lawsuits. Maine limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. Maine also has specific provisions protecting low-income consumers. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Maine's protective regulatory framework."
+        answer: "Maine provides strong consumer protections through the Maine Unfair Trade Practices Act (5 M.R.S. 207) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Maine residents, prohibiting harassment, threats, and false statements. Maine law requires debt buyers to be licensed and follow specific disclosure requirements. Maine has strict rules governing debt collection conduct and validation requirements. Maine courts require proper documentation in debt collection lawsuits. Maine limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. Maine also has specific provisions protecting low-income consumers. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Maine's protective regulatory framework."
       },
       {
         question: "What should Maine residents know about debt relief?",
@@ -115,7 +115,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Maine users, our calculations reference applicable state laws including the Maine Unfair Trade Practices Act (5 M.R.S. §207) and related consumer protection statutes governing debt collection practices.",
+      "For Maine users, our calculations reference applicable state laws including the Maine Unfair Trade Practices Act (5 M.R.S. 207) and related consumer protection statutes governing debt collection practices.",
       "These laws regulate consumer protection and debt collection conduct in Maine. Our calculator uses documented settlement data within Maine's regulatory framework."
     ],
     
@@ -134,7 +134,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Maryland?",
-        answer: "Debt settlement in Maryland operates through negotiations with creditors to accept reduced balances, regulated under Maryland's consumer protection laws. The process involves stopping payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements. Our calculator estimates settlement percentages based on debt characteristics. Maryland law prohibits unfair and deceptive practices through the Maryland Consumer Protection Act (Md. Code, Com. Law §13-301 et seq.). Maryland's Consumer Debt Collection Act (Md. Code, Com. Law §14-201 et seq.) provides additional protections specific to debt collection. Maryland requires collection agencies to be licensed by the Office of the Commissioner of Financial Regulation. Settlement companies should provide clear disclosures about fees and realistic expectations. Individual results vary based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry data for Maryland residents."
+        answer: "Debt settlement in Maryland operates through negotiations with creditors to accept reduced balances, regulated under Maryland's consumer protection laws. The process involves stopping payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements. Our calculator estimates settlement percentages based on debt characteristics. Maryland law prohibits unfair and deceptive practices through the Maryland Consumer Protection Act (Md. Code, Com. Law 13-301 et seq.). Maryland's Consumer Debt Collection Act (Md. Code, Com. Law 14-201 et seq.) provides additional protections specific to debt collection. Maryland requires collection agencies to be licensed by the Office of the Commissioner of Financial Regulation. Settlement companies should provide clear disclosures about fees and realistic expectations. Individual results vary based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry data for Maryland residents."
       },
       {
         question: "How long does debt settlement take in Maryland?",
@@ -142,7 +142,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Maryland provide against debt collectors?",
-        answer: "Maryland provides strong consumer protections through the Maryland Consumer Debt Collection Act (Md. Code, Com. Law §14-201 et seq.) and the Maryland Consumer Protection Act (Md. Code, Com. Law §13-301 et seq.). These laws prohibit harassment, deceptive practices, and unfair methods in debt collection. Maryland requires debt collectors to be licensed and follow strict rules about contact methods, disclosure requirements, and prohibited conduct. Federal Fair Debt Collection Practices Act protections also apply to all Maryland residents. Maryland courts require substantial documentation in debt collection lawsuits. Maryland limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Maryland also has specific protections for military servicemembers and their families. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Maryland's protective regulatory framework."
+        answer: "Maryland provides strong consumer protections through the Maryland Consumer Debt Collection Act (Md. Code, Com. Law 14-201 et seq.) and the Maryland Consumer Protection Act (Md. Code, Com. Law 13-301 et seq.). These laws prohibit harassment, deceptive practices, and unfair methods in debt collection. Maryland requires debt collectors to be licensed and follow strict rules about contact methods, disclosure requirements, and prohibited conduct. Federal Fair Debt Collection Practices Act protections also apply to all Maryland residents. Maryland courts require substantial documentation in debt collection lawsuits. Maryland limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Maryland also has specific protections for military servicemembers and their families. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Maryland's protective regulatory framework."
       },
       {
         question: "What should Maryland residents know about debt relief?",
@@ -151,7 +151,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Maryland users, our calculations reference applicable state laws including the Maryland Consumer Debt Collection Act (Md. Code, Com. Law §14-201 et seq.), the Maryland Consumer Protection Act (Md. Code, Com. Law §13-301 et seq.), and related statutes.",
+      "For Maryland users, our calculations reference applicable state laws including the Maryland Consumer Debt Collection Act (Md. Code, Com. Law 14-201 et seq.), the Maryland Consumer Protection Act (Md. Code, Com. Law 13-301 et seq.), and related statutes.",
       "These laws regulate debt collection practices and consumer protection in Maryland. Our calculator uses documented settlement data within Maryland's regulatory framework."
     ],
     
@@ -213,7 +213,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Minnesota?",
-        answer: "Debt settlement in Minnesota operates through negotiations with creditors to accept reduced balances, regulated under Minnesota consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Minnesota law prohibits unfair and deceptive practices through the Minnesota Consumer Fraud Act (Minn. Stat. §325F.69). Minnesota also regulates collection agencies through licensing requirements and conduct standards. Minnesota has specific statutes governing debt collection practices that provide consumer protections. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Minnesota residents."
+        answer: "Debt settlement in Minnesota operates through negotiations with creditors to accept reduced balances, regulated under Minnesota consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Minnesota law prohibits unfair and deceptive practices through the Minnesota Consumer Fraud Act (Minn. Stat. 325F.69). Minnesota also regulates collection agencies through licensing requirements and conduct standards. Minnesota has specific statutes governing debt collection practices that provide consumer protections. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Minnesota residents."
       },
       {
         question: "How long does debt settlement take in Minnesota?",
@@ -221,7 +221,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Minnesota provide against debt collectors?",
-        answer: "Minnesota provides consumer protections through the Minnesota Consumer Fraud Act (Minn. Stat. §325F.69) and specific debt collection statutes. These laws prohibit unfair, deceptive, and unconscionable practices in consumer transactions, including debt collection. Minnesota requires collection agencies to be licensed and follow strict rules about contact methods, disclosure requirements, and prohibited conduct. Federal Fair Debt Collection Practices Act protections apply to all Minnesota residents, prohibiting harassment, threats, and false statements. Minnesota courts require proper documentation in debt collection lawsuits. Minnesota limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. Minnesota also has specific provisions protecting consumers from abusive collection tactics. These protections don't eliminate debt but prevent abusive methods and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Minnesota's regulatory framework."
+        answer: "Minnesota provides consumer protections through the Minnesota Consumer Fraud Act (Minn. Stat. 325F.69) and specific debt collection statutes. These laws prohibit unfair, deceptive, and unconscionable practices in consumer transactions, including debt collection. Minnesota requires collection agencies to be licensed and follow strict rules about contact methods, disclosure requirements, and prohibited conduct. Federal Fair Debt Collection Practices Act protections apply to all Minnesota residents, prohibiting harassment, threats, and false statements. Minnesota courts require proper documentation in debt collection lawsuits. Minnesota limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. Minnesota also has specific provisions protecting consumers from abusive collection tactics. These protections don't eliminate debt but prevent abusive methods and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Minnesota's regulatory framework."
       },
       {
         question: "What should Minnesota residents know about debt relief?",
@@ -230,7 +230,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Minnesota users, our calculations reference applicable state laws including the Minnesota Consumer Fraud Act (Minn. Stat. §325F.69) and related consumer protection statutes governing debt collection practices.",
+      "For Minnesota users, our calculations reference applicable state laws including the Minnesota Consumer Fraud Act (Minn. Stat. 325F.69) and related consumer protection statutes governing debt collection practices.",
       "These laws regulate consumer protection and debt collection conduct in Minnesota. Our calculator uses documented settlement data within Minnesota's regulatory framework."
     ],
     
@@ -252,7 +252,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Mississippi?",
-        answer: "Debt settlement in Mississippi operates through negotiations with creditors to accept reduced balances, regulated under Mississippi consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements. Our calculator estimates settlement percentages based on debt characteristics. Mississippi law prohibits unfair and deceptive practices through the Mississippi Consumer Protection Act (Miss. Code §75-24-1 et seq.). Mississippi requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Mississippi residents."
+        answer: "Debt settlement in Mississippi operates through negotiations with creditors to accept reduced balances, regulated under Mississippi consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements. Our calculator estimates settlement percentages based on debt characteristics. Mississippi law prohibits unfair and deceptive practices through the Mississippi Consumer Protection Act (Miss. Code 75-24-1 et seq.). Mississippi requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Mississippi residents."
       },
       {
         question: "How long does debt settlement take in Mississippi?",
@@ -260,7 +260,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Mississippi provide for consumers in debt?",
-        answer: "Mississippi provides consumer protections through the Mississippi Consumer Protection Act (Miss. Code §75-24-1 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Mississippi residents, prohibiting harassment, threats, and false statements. Mississippi law requires collection agencies to follow state and federal rules. Mississippi courts require proper documentation in debt collection lawsuits. Mississippi limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Mississippi also has provisions protecting consumers from certain collection tactics. These protections don't eliminate debt but prevent abusive collection methods and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Mississippi's regulatory framework."
+        answer: "Mississippi provides consumer protections through the Mississippi Consumer Protection Act (Miss. Code 75-24-1 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Mississippi residents, prohibiting harassment, threats, and false statements. Mississippi law requires collection agencies to follow state and federal rules. Mississippi courts require proper documentation in debt collection lawsuits. Mississippi limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Mississippi also has provisions protecting consumers from certain collection tactics. These protections don't eliminate debt but prevent abusive collection methods and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Mississippi's regulatory framework."
       },
       {
         question: "What should Mississippi residents know about debt relief?",
@@ -269,7 +269,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Mississippi users, our calculations reference applicable state laws including the Mississippi Consumer Protection Act (Miss. Code §75-24-1 et seq.) and related consumer protection statutes.",
+      "For Mississippi users, our calculations reference applicable state laws including the Mississippi Consumer Protection Act (Miss. Code 75-24-1 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Mississippi. Our calculator uses documented settlement data within Mississippi's regulatory framework."
     ],
     
@@ -291,7 +291,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Missouri?",
-        answer: "Debt settlement in Missouri operates through negotiations with creditors to accept reduced balances, regulated under Missouri consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Missouri law prohibits unfair and deceptive practices through the Missouri Merchandising Practices Act (Mo. Rev. Stat. §407.010 et seq.). Missouri also requires collection agencies to comply with state and federal regulations. Settlement companies should provide clear disclosures about fees and realistic expectations. Individual results vary based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry data for Missouri residents."
+        answer: "Debt settlement in Missouri operates through negotiations with creditors to accept reduced balances, regulated under Missouri consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Missouri law prohibits unfair and deceptive practices through the Missouri Merchandising Practices Act (Mo. Rev. Stat. 407.010 et seq.). Missouri also requires collection agencies to comply with state and federal regulations. Settlement companies should provide clear disclosures about fees and realistic expectations. Individual results vary based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry data for Missouri residents."
       },
       {
         question: "How long does debt settlement take in Missouri?",
@@ -299,7 +299,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Missouri provide against debt collectors?",
-        answer: "Missouri provides consumer protections through the Missouri Merchandising Practices Act (Mo. Rev. Stat. §407.010 et seq.) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Missouri residents, prohibiting harassment, threats, and false statements. Missouri law requires collection agencies to follow specific rules and prohibits certain abusive practices. Missouri courts require proper documentation in debt collection lawsuits. Missouri limits wage garnishment to the lesser of 25% of disposable weekly earnings or 90% of 30 times the federal minimum wage per week, whichever is less. Missouri also has provisions protecting consumers from certain collection tactics. These protections don't eliminate debt but prevent abusive collection methods and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Missouri's regulatory framework."
+        answer: "Missouri provides consumer protections through the Missouri Merchandising Practices Act (Mo. Rev. Stat. 407.010 et seq.) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Missouri residents, prohibiting harassment, threats, and false statements. Missouri law requires collection agencies to follow specific rules and prohibits certain abusive practices. Missouri courts require proper documentation in debt collection lawsuits. Missouri limits wage garnishment to the lesser of 25% of disposable weekly earnings or 90% of 30 times the federal minimum wage per week, whichever is less. Missouri also has provisions protecting consumers from certain collection tactics. These protections don't eliminate debt but prevent abusive collection methods and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Missouri's regulatory framework."
       },
       {
         question: "What should Missouri residents know about debt relief?",
@@ -308,7 +308,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Missouri users, our calculations reference applicable state laws including the Missouri Merchandising Practices Act (Mo. Rev. Stat. §407.010 et seq.) and related consumer protection statutes.",
+      "For Missouri users, our calculations reference applicable state laws including the Missouri Merchandising Practices Act (Mo. Rev. Stat. 407.010 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Missouri. Our calculator uses documented settlement data within Missouri's regulatory framework."
     ],
     
@@ -336,7 +336,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Montana?",
-        answer: "Debt settlement in Montana operates through negotiations with creditors to accept reduced balances, regulated under Montana consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Montana law prohibits unfair and deceptive practices through the Montana Consumer Protection Act (Mont. Code §30-14-101 et seq.). Montana also requires collection agencies to be licensed. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Montana residents."
+        answer: "Debt settlement in Montana operates through negotiations with creditors to accept reduced balances, regulated under Montana consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Montana law prohibits unfair and deceptive practices through the Montana Consumer Protection Act (Mont. Code 30-14-101 et seq.). Montana also requires collection agencies to be licensed. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Montana residents."
       },
       {
         question: "How long does debt settlement take in Montana?",
@@ -344,7 +344,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Montana provide for consumers in debt?",
-        answer: "Montana provides consumer protections through the Montana Consumer Protection Act (Mont. Code §30-14-101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Montana residents. Montana law requires collection agencies to be licensed and follow specific rules. Montana courts require proper documentation in debt collection lawsuits. Montana limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Montana's regulatory framework."
+        answer: "Montana provides consumer protections through the Montana Consumer Protection Act (Mont. Code 30-14-101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Montana residents. Montana law requires collection agencies to be licensed and follow specific rules. Montana courts require proper documentation in debt collection lawsuits. Montana limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Montana's regulatory framework."
       },
       {
         question: "What should Montana residents know about debt relief?",
@@ -353,7 +353,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Montana users, our calculations reference applicable state laws including the Montana Consumer Protection Act (Mont. Code §30-14-101 et seq.) and related consumer protection statutes.",
+      "For Montana users, our calculations reference applicable state laws including the Montana Consumer Protection Act (Mont. Code 30-14-101 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Montana. Our calculator uses documented settlement data within Montana's regulatory framework."
     ],
     
@@ -375,7 +375,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Nebraska?",
-        answer: "Debt settlement in Nebraska involves negotiating with creditors to accept less than full balances, operating under Nebraska consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs. Our calculator estimates settlement percentages based on debt characteristics. Nebraska law prohibits unfair and deceptive practices through the Nebraska Consumer Protection Act (Neb. Rev. Stat. §59-1601 et seq.). Nebraska also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Nebraska residents."
+        answer: "Debt settlement in Nebraska involves negotiating with creditors to accept less than full balances, operating under Nebraska consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs. Our calculator estimates settlement percentages based on debt characteristics. Nebraska law prohibits unfair and deceptive practices through the Nebraska Consumer Protection Act (Neb. Rev. Stat. 59-1601 et seq.). Nebraska also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Nebraska residents."
       },
       {
         question: "How long does debt settlement take in Nebraska?",
@@ -383,7 +383,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Nebraska provide against debt collectors?",
-        answer: "Nebraska provides consumer protections through the Nebraska Consumer Protection Act (Neb. Rev. Stat. §59-1601 et seq.) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Nebraska residents, prohibiting harassment, threats, false statements, and unfair methods. Nebraska law requires collection agencies to comply with specific regulations. Nebraska courts require proper documentation in debt collection lawsuits. Nebraska limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage, or 15% of gross wages for head of family. Nebraska provides additional protections for heads of families. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Nebraska's regulatory framework."
+        answer: "Nebraska provides consumer protections through the Nebraska Consumer Protection Act (Neb. Rev. Stat. 59-1601 et seq.) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Nebraska residents, prohibiting harassment, threats, false statements, and unfair methods. Nebraska law requires collection agencies to comply with specific regulations. Nebraska courts require proper documentation in debt collection lawsuits. Nebraska limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage, or 15% of gross wages for head of family. Nebraska provides additional protections for heads of families. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Nebraska's regulatory framework."
       },
       {
         question: "What should Nebraska residents know about debt relief?",
@@ -392,7 +392,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Nebraska users, our calculations reference applicable state laws including the Nebraska Consumer Protection Act (Neb. Rev. Stat. §59-1601 et seq.) and related consumer protection statutes.",
+      "For Nebraska users, our calculations reference applicable state laws including the Nebraska Consumer Protection Act (Neb. Rev. Stat. 59-1601 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Nebraska. Our calculator uses documented settlement data within Nebraska's regulatory framework."
     ],
     
@@ -416,7 +416,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Nevada?",
-        answer: "Debt settlement in Nevada operates through negotiations with creditors to accept reduced balances, regulated under Nevada consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Nevada law prohibits unfair and deceptive practices through the Nevada Deceptive Trade Practices Act (NRS §598). Nevada also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Nevada residents."
+        answer: "Debt settlement in Nevada operates through negotiations with creditors to accept reduced balances, regulated under Nevada consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Nevada law prohibits unfair and deceptive practices through the Nevada Deceptive Trade Practices Act (NRS 598). Nevada also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Nevada residents."
       },
       {
         question: "How long does debt settlement take in Nevada?",
@@ -424,7 +424,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Nevada provide against debt collectors?",
-        answer: "Nevada provides consumer protections through the Nevada Deceptive Trade Practices Act (NRS §598) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Nevada residents. Nevada law requires collection agencies to be licensed and follow specific rules. Nevada courts require proper documentation in debt collection lawsuits. Nevada limits wage garnishment to the lesser of 25% of disposable weekly earnings or 50% of the amount by which weekly wages exceed 30 times federal minimum wage-providing some additional protection beyond federal minimums. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Nevada's regulatory framework."
+        answer: "Nevada provides consumer protections through the Nevada Deceptive Trade Practices Act (NRS 598) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Nevada residents. Nevada law requires collection agencies to be licensed and follow specific rules. Nevada courts require proper documentation in debt collection lawsuits. Nevada limits wage garnishment to the lesser of 25% of disposable weekly earnings or 50% of the amount by which weekly wages exceed 30 times federal minimum wage-providing some additional protection beyond federal minimums. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Nevada's regulatory framework."
       },
       {
         question: "What should Nevada residents know about debt relief?",
@@ -433,7 +433,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Nevada users, our calculations reference applicable state laws including the Nevada Deceptive Trade Practices Act (NRS §598) and related consumer protection statutes.",
+      "For Nevada users, our calculations reference applicable state laws including the Nevada Deceptive Trade Practices Act (NRS 598) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Nevada. Our calculator uses documented settlement data within Nevada's regulatory framework."
     ],
     
@@ -532,7 +532,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in New Mexico?",
-        answer: "Debt settlement in New Mexico involves negotiating with creditors to accept less than full balances, operating under New Mexico consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt characteristics. New Mexico law prohibits unfair and deceptive practices through the New Mexico Unfair Practices Act (NMSA §57-12-1 et seq.). New Mexico also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for New Mexico residents."
+        answer: "Debt settlement in New Mexico involves negotiating with creditors to accept less than full balances, operating under New Mexico consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt characteristics. New Mexico law prohibits unfair and deceptive practices through the New Mexico Unfair Practices Act (NMSA 57-12-1 et seq.). New Mexico also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for New Mexico residents."
       },
       {
         question: "How long does debt settlement take in New Mexico?",
@@ -540,7 +540,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does New Mexico provide for consumers in debt?",
-        answer: "New Mexico provides consumer protections through the New Mexico Unfair Practices Act (NMSA §57-12-1 et seq.) which prohibits unfair and deceptive trade practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all New Mexico residents. New Mexico law requires collection agencies to comply with specific regulations. New Mexico courts require proper documentation in debt collection lawsuits. New Mexico limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within New Mexico's regulatory framework."
+        answer: "New Mexico provides consumer protections through the New Mexico Unfair Practices Act (NMSA 57-12-1 et seq.) which prohibits unfair and deceptive trade practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all New Mexico residents. New Mexico law requires collection agencies to comply with specific regulations. New Mexico courts require proper documentation in debt collection lawsuits. New Mexico limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within New Mexico's regulatory framework."
       },
       {
         question: "What should New Mexico residents know about debt relief?",
@@ -549,7 +549,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For New Mexico users, our calculations reference applicable state laws including the New Mexico Unfair Practices Act (NMSA §57-12-1 et seq.) and related consumer protection statutes.",
+      "For New Mexico users, our calculations reference applicable state laws including the New Mexico Unfair Practices Act (NMSA 57-12-1 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in New Mexico. Our calculator uses documented settlement data within New Mexico's regulatory framework."
     ],
     
@@ -610,7 +610,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Oklahoma?",
-        answer: "Debt settlement in Oklahoma involves negotiating with creditors to accept less than full balances, operating under Oklahoma consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs. Our calculator estimates settlement percentages based on debt characteristics. Oklahoma law prohibits unfair and deceptive practices through the Oklahoma Consumer Protection Act (15 O.S. §751 et seq.). Oklahoma also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Oklahoma residents."
+        answer: "Debt settlement in Oklahoma involves negotiating with creditors to accept less than full balances, operating under Oklahoma consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs. Our calculator estimates settlement percentages based on debt characteristics. Oklahoma law prohibits unfair and deceptive practices through the Oklahoma Consumer Protection Act (15 O.S. 751 et seq.). Oklahoma also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Oklahoma residents."
       },
       {
         question: "How long does debt settlement take in Oklahoma?",
@@ -618,7 +618,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Oklahoma provide for consumers in debt?",
-        answer: "Oklahoma provides consumer protections through the Oklahoma Consumer Protection Act (15 O.S. §751 et seq.) which prohibits deceptive and unconscionable trade practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Oklahoma residents. Oklahoma law requires collection agencies to comply with specific regulations. Oklahoma courts require proper documentation in debt collection lawsuits. Oklahoma limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Oklahoma also has a statute requiring the garnishment to be the lesser of these amounts or 75% of disposable earnings, whichever is greater. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Oklahoma's regulatory framework."
+        answer: "Oklahoma provides consumer protections through the Oklahoma Consumer Protection Act (15 O.S. 751 et seq.) which prohibits deceptive and unconscionable trade practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Oklahoma residents. Oklahoma law requires collection agencies to comply with specific regulations. Oklahoma courts require proper documentation in debt collection lawsuits. Oklahoma limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Oklahoma also has a statute requiring the garnishment to be the lesser of these amounts or 75% of disposable earnings, whichever is greater. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Oklahoma's regulatory framework."
       },
       {
         question: "What should Oklahoma residents know about debt relief?",
@@ -627,7 +627,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Oklahoma users, our calculations reference applicable state laws including the Oklahoma Consumer Protection Act (15 O.S. §751 et seq.) and related consumer protection statutes.",
+      "For Oklahoma users, our calculations reference applicable state laws including the Oklahoma Consumer Protection Act (15 O.S. 751 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Oklahoma. Our calculator uses documented settlement data within Oklahoma's regulatory framework."
     ],
     
@@ -653,7 +653,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Oregon?",
-        answer: "Debt settlement in Oregon operates through negotiations with creditors to accept reduced balances, regulated under Oregon's consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Oregon law prohibits unfair and deceptive practices through the Oregon Unlawful Trade Practices Act (ORS §646.605 et seq.). Oregon also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Oregon residents."
+        answer: "Debt settlement in Oregon operates through negotiations with creditors to accept reduced balances, regulated under Oregon's consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Oregon law prohibits unfair and deceptive practices through the Oregon Unlawful Trade Practices Act (ORS 646.605 et seq.). Oregon also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Oregon residents."
       },
       {
         question: "How long does debt settlement take in Oregon?",
@@ -661,7 +661,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Oregon provide against debt collectors?",
-        answer: "Oregon provides strong consumer protections through the Oregon Unlawful Trade Practices Act (ORS §646.605 et seq.) and the Oregon Collection Agency Act (ORS §697.005 et seq.). These laws prohibit unfair and deceptive practices in debt collection. Federal Fair Debt Collection Practices Act protections apply to all Oregon residents. Oregon law requires collection agencies to be licensed and follow detailed rules about contact methods, validation requirements, and prohibited conduct. Oregon courts require substantial documentation in debt collection lawsuits. Oregon limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times state minimum wage-providing stronger protection than federal minimums and accounting for Oregon's higher minimum wage. These protections don't eliminate debt but prevent abusive tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Oregon's protective regulatory framework."
+        answer: "Oregon provides strong consumer protections through the Oregon Unlawful Trade Practices Act (ORS 646.605 et seq.) and the Oregon Collection Agency Act (ORS 697.005 et seq.). These laws prohibit unfair and deceptive practices in debt collection. Federal Fair Debt Collection Practices Act protections apply to all Oregon residents. Oregon law requires collection agencies to be licensed and follow detailed rules about contact methods, validation requirements, and prohibited conduct. Oregon courts require substantial documentation in debt collection lawsuits. Oregon limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times state minimum wage-providing stronger protection than federal minimums and accounting for Oregon's higher minimum wage. These protections don't eliminate debt but prevent abusive tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Oregon's protective regulatory framework."
       },
       {
         question: "What should Oregon residents know about debt relief?",
@@ -670,7 +670,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Oregon users, our calculations reference applicable state laws including the Oregon Unlawful Trade Practices Act (ORS §646.605 et seq.), the Oregon Collection Agency Act (ORS §697.005 et seq.), and related statutes.",
+      "For Oregon users, our calculations reference applicable state laws including the Oregon Unlawful Trade Practices Act (ORS 646.605 et seq.), the Oregon Collection Agency Act (ORS 697.005 et seq.), and related statutes.",
       "These laws regulate consumer protection and debt collection practices in Oregon. Our calculator uses documented settlement data within Oregon's regulatory framework."
     ],
     
@@ -692,7 +692,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Rhode Island?",
-        answer: "Debt settlement in Rhode Island involves negotiating with creditors to accept less than full balances, operating under Rhode Island consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Rhode Island law prohibits unfair and deceptive practices through the Rhode Island Deceptive Trade Practices Act (R.I. Gen. Laws §6-13.1-1 et seq.). Rhode Island also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Rhode Island residents."
+        answer: "Debt settlement in Rhode Island involves negotiating with creditors to accept less than full balances, operating under Rhode Island consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Rhode Island law prohibits unfair and deceptive practices through the Rhode Island Deceptive Trade Practices Act (R.I. Gen. Laws 6-13.1-1 et seq.). Rhode Island also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Rhode Island residents."
       },
       {
         question: "How long does debt settlement take in Rhode Island?",
@@ -700,7 +700,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Rhode Island provide for consumers in debt?",
-        answer: "Rhode Island provides consumer protections through the Rhode Island Deceptive Trade Practices Act (R.I. Gen. Laws §6-13.1-1 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Rhode Island residents, prohibiting harassment, threats, false statements, and unfair methods. Rhode Island law requires collection agencies to comply with regulations. Rhode Island courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Rhode Island limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Rhode Island's regulatory framework."
+        answer: "Rhode Island provides consumer protections through the Rhode Island Deceptive Trade Practices Act (R.I. Gen. Laws 6-13.1-1 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Rhode Island residents, prohibiting harassment, threats, false statements, and unfair methods. Rhode Island law requires collection agencies to comply with regulations. Rhode Island courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Rhode Island limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Rhode Island's regulatory framework."
       },
       {
         question: "What should Rhode Island residents know about debt relief?",
@@ -709,7 +709,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Rhode Island users, our calculations reference applicable state laws including the Rhode Island Deceptive Trade Practices Act (R.I. Gen. Laws §6-13.1-1 et seq.) and related consumer protection statutes.",
+      "For Rhode Island users, our calculations reference applicable state laws including the Rhode Island Deceptive Trade Practices Act (R.I. Gen. Laws 6-13.1-1 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Rhode Island. Our calculator uses documented settlement data within Rhode Island's regulatory framework."
     ],
     
@@ -729,7 +729,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in South Carolina?",
-        answer: "Debt settlement in South Carolina operates through negotiations with creditors to accept reduced balances, regulated under South Carolina consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. South Carolina law prohibits unfair and deceptive practices through the South Carolina Unfair Trade Practices Act (S.C. Code §39-5-10 et seq.). South Carolina also requires collection agencies to comply with state and federal regulations. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for South Carolina residents."
+        answer: "Debt settlement in South Carolina operates through negotiations with creditors to accept reduced balances, regulated under South Carolina consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. South Carolina law prohibits unfair and deceptive practices through the South Carolina Unfair Trade Practices Act (S.C. Code 39-5-10 et seq.). South Carolina also requires collection agencies to comply with state and federal regulations. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for South Carolina residents."
       },
       {
         question: "How long does debt settlement take in South Carolina?",
@@ -737,7 +737,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does South Carolina provide against debt collectors?",
-        answer: "South Carolina provides consumer protections through the South Carolina Unfair Trade Practices Act (S.C. Code §39-5-10 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all South Carolina residents, prohibiting harassment, threats, false statements, and unfair methods. South Carolina law requires collection agencies to comply with regulations. South Carolina courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. South Carolina limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within South Carolina's regulatory framework."
+        answer: "South Carolina provides consumer protections through the South Carolina Unfair Trade Practices Act (S.C. Code 39-5-10 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all South Carolina residents, prohibiting harassment, threats, false statements, and unfair methods. South Carolina law requires collection agencies to comply with regulations. South Carolina courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. South Carolina limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within South Carolina's regulatory framework."
       },
       {
         question: "What should South Carolina residents know about debt relief?",
@@ -746,7 +746,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For South Carolina users, our calculations reference applicable state laws including the South Carolina Unfair Trade Practices Act (S.C. Code §39-5-10 et seq.) and related consumer protection statutes.",
+      "For South Carolina users, our calculations reference applicable state laws including the South Carolina Unfair Trade Practices Act (S.C. Code 39-5-10 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in South Carolina. Our calculator uses documented settlement data within South Carolina's regulatory framework."
     ],
     
@@ -807,7 +807,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Tennessee?",
-        answer: "Debt settlement in Tennessee operates through negotiations with creditors to accept reduced balances, regulated under Tennessee consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Tennessee law prohibits unfair and deceptive practices through the Tennessee Consumer Protection Act (Tenn. Code §47-18-101 et seq.). Tennessee also requires collection agencies to comply with state and federal regulations. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Tennessee residents."
+        answer: "Debt settlement in Tennessee operates through negotiations with creditors to accept reduced balances, regulated under Tennessee consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Tennessee law prohibits unfair and deceptive practices through the Tennessee Consumer Protection Act (Tenn. Code 47-18-101 et seq.). Tennessee also requires collection agencies to comply with state and federal regulations. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Tennessee residents."
       },
       {
         question: "How long does debt settlement take in Tennessee?",
@@ -815,7 +815,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Tennessee provide against debt collectors?",
-        answer: "Tennessee provides consumer protections through the Tennessee Consumer Protection Act (Tenn. Code §47-18-101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Tennessee residents, prohibiting harassment, threats, false statements, and unfair methods. Tennessee law requires collection agencies to comply with regulations. Tennessee courts require proper documentation in debt collection lawsuits. Tennessee limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage, or $2.50 per week (whichever is less), with additional protections for heads of household. Tennessee's wage garnishment protections provide significant safeguards for many residents. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Tennessee's regulatory framework."
+        answer: "Tennessee provides consumer protections through the Tennessee Consumer Protection Act (Tenn. Code 47-18-101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Tennessee residents, prohibiting harassment, threats, false statements, and unfair methods. Tennessee law requires collection agencies to comply with regulations. Tennessee courts require proper documentation in debt collection lawsuits. Tennessee limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage, or $2.50 per week (whichever is less), with additional protections for heads of household. Tennessee's wage garnishment protections provide significant safeguards for many residents. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Tennessee's regulatory framework."
       },
       {
         question: "What should Tennessee residents know about debt relief?",
@@ -824,7 +824,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Tennessee users, our calculations reference applicable state laws including the Tennessee Consumer Protection Act (Tenn. Code §47-18-101 et seq.) and related consumer protection statutes.",
+      "For Tennessee users, our calculations reference applicable state laws including the Tennessee Consumer Protection Act (Tenn. Code 47-18-101 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Tennessee. Our calculator uses documented settlement data within Tennessee's regulatory framework."
     ],
     
@@ -850,7 +850,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Utah?",
-        answer: "Debt settlement in Utah involves negotiating with creditors to accept less than full balances, operating under Utah consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Utah law prohibits unfair and deceptive practices through the Utah Consumer Sales Practices Act (Utah Code §13-11-1 et seq.). Utah also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Utah residents."
+        answer: "Debt settlement in Utah involves negotiating with creditors to accept less than full balances, operating under Utah consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Utah law prohibits unfair and deceptive practices through the Utah Consumer Sales Practices Act (Utah Code 13-11-1 et seq.). Utah also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Utah residents."
       },
       {
         question: "How long does debt settlement take in Utah?",
@@ -858,7 +858,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Utah provide for consumers in debt?",
-        answer: "Utah provides consumer protections through the Utah Consumer Sales Practices Act (Utah Code §13-11-1 et seq.) which prohibits deceptive and unconscionable practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Utah residents, prohibiting harassment, threats, false statements, and unfair methods. Utah law requires collection agencies to comply with regulations. Utah courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Utah limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Utah's regulatory framework."
+        answer: "Utah provides consumer protections through the Utah Consumer Sales Practices Act (Utah Code 13-11-1 et seq.) which prohibits deceptive and unconscionable practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Utah residents, prohibiting harassment, threats, false statements, and unfair methods. Utah law requires collection agencies to comply with regulations. Utah courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Utah limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Utah's regulatory framework."
       },
       {
         question: "What should Utah residents know about debt relief?",
@@ -867,7 +867,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Utah users, our calculations reference applicable state laws including the Utah Consumer Sales Practices Act (Utah Code §13-11-1 et seq.) and related consumer protection statutes.",
+      "For Utah users, our calculations reference applicable state laws including the Utah Consumer Sales Practices Act (Utah Code 13-11-1 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Utah. Our calculator uses documented settlement data within Utah's regulatory framework."
     ],
     
@@ -891,7 +891,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Vermont?",
-        answer: "Debt settlement in Vermont operates through negotiations with creditors to accept reduced balances, regulated under Vermont's consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Vermont law prohibits unfair and deceptive practices through the Vermont Consumer Fraud Act (9 V.S.A. §2451 et seq.). Vermont also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Vermont residents."
+        answer: "Debt settlement in Vermont operates through negotiations with creditors to accept reduced balances, regulated under Vermont's consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Vermont law prohibits unfair and deceptive practices through the Vermont Consumer Fraud Act (9 V.S.A. 2451 et seq.). Vermont also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Vermont residents."
       },
       {
         question: "How long does debt settlement take in Vermont?",
@@ -899,7 +899,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Vermont provide against debt collectors?",
-        answer: "Vermont provides strong consumer protections through the Vermont Consumer Fraud Act (9 V.S.A. §2451 et seq.) and specific debt collection regulations. These laws prohibit unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Vermont residents, prohibiting harassment, threats, false statements, and unfair methods. Vermont law requires collection agencies to be licensed and follow detailed rules. Vermont courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Vermont limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Vermont also has consumer-friendly court procedures and strong consumer protection enforcement. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Vermont's protective regulatory framework."
+        answer: "Vermont provides strong consumer protections through the Vermont Consumer Fraud Act (9 V.S.A. 2451 et seq.) and specific debt collection regulations. These laws prohibit unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Vermont residents, prohibiting harassment, threats, false statements, and unfair methods. Vermont law requires collection agencies to be licensed and follow detailed rules. Vermont courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Vermont limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Vermont also has consumer-friendly court procedures and strong consumer protection enforcement. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Vermont's protective regulatory framework."
       },
       {
         question: "What should Vermont residents know about debt relief?",
@@ -908,7 +908,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Vermont users, our calculations reference applicable state laws including the Vermont Consumer Fraud Act (9 V.S.A. §2451 et seq.) and related consumer protection statutes.",
+      "For Vermont users, our calculations reference applicable state laws including the Vermont Consumer Fraud Act (9 V.S.A. 2451 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Vermont. Our calculator uses documented settlement data within Vermont's regulatory framework."
     ],
     
@@ -929,7 +929,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Virginia?",
-        answer: "Debt settlement in Virginia involves negotiating with creditors to accept less than full balances, operating under Virginia consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Virginia law prohibits unfair and deceptive practices through the Virginia Consumer Protection Act (Va. Code §59.1-196 et seq.). Virginia also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Virginia residents."
+        answer: "Debt settlement in Virginia involves negotiating with creditors to accept less than full balances, operating under Virginia consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Virginia law prohibits unfair and deceptive practices through the Virginia Consumer Protection Act (Va. Code 59.1-196 et seq.). Virginia also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Virginia residents."
       },
       {
         question: "How long does debt settlement take in Virginia?",
@@ -937,7 +937,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Virginia provide for consumers in debt?",
-        answer: "Virginia provides consumer protections through the Virginia Consumer Protection Act (Va. Code §59.1-196 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Virginia residents, prohibiting harassment, threats, false statements, and unfair methods. Virginia law requires collection agencies to be licensed and follow specific rules. Virginia courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Virginia limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Virginia's regulatory framework."
+        answer: "Virginia provides consumer protections through the Virginia Consumer Protection Act (Va. Code 59.1-196 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Virginia residents, prohibiting harassment, threats, false statements, and unfair methods. Virginia law requires collection agencies to be licensed and follow specific rules. Virginia courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Virginia limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Virginia's regulatory framework."
       },
       {
         question: "What should Virginia residents know about debt relief?",
@@ -946,7 +946,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Virginia users, our calculations reference applicable state laws including the Virginia Consumer Protection Act (Va. Code §59.1-196 et seq.) and related consumer protection statutes.",
+      "For Virginia users, our calculations reference applicable state laws including the Virginia Consumer Protection Act (Va. Code 59.1-196 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Virginia. Our calculator uses documented settlement data within Virginia's regulatory framework."
     ],
     
@@ -1006,7 +1006,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in West Virginia?",
-        answer: "Debt settlement in West Virginia involves negotiating with creditors to accept less than full balances, operating under West Virginia consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. West Virginia law prohibits unfair and deceptive practices through the West Virginia Consumer Credit and Protection Act (W. Va. Code §46A-1-101 et seq.). West Virginia also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for West Virginia residents."
+        answer: "Debt settlement in West Virginia involves negotiating with creditors to accept less than full balances, operating under West Virginia consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. West Virginia law prohibits unfair and deceptive practices through the West Virginia Consumer Credit and Protection Act (W. Va. Code 46A-1-101 et seq.). West Virginia also requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for West Virginia residents."
       },
       {
         question: "How long does debt settlement take in West Virginia?",
@@ -1014,7 +1014,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does West Virginia provide for consumers in debt?",
-        answer: "West Virginia provides consumer protections through the West Virginia Consumer Credit and Protection Act (W. Va. Code §46A-1-101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all West Virginia residents, prohibiting harassment, threats, false statements, and unfair methods. West Virginia law requires collection agencies to comply with regulations. West Virginia courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. West Virginia limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage, or 80% of weekly wages, whichever is greater. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within West Virginia's regulatory framework."
+        answer: "West Virginia provides consumer protections through the West Virginia Consumer Credit and Protection Act (W. Va. Code 46A-1-101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all West Virginia residents, prohibiting harassment, threats, false statements, and unfair methods. West Virginia law requires collection agencies to comply with regulations. West Virginia courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. West Virginia limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage, or 80% of weekly wages, whichever is greater. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within West Virginia's regulatory framework."
       },
       {
         question: "What should West Virginia residents know about debt relief?",
@@ -1023,7 +1023,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For West Virginia users, our calculations reference applicable state laws including the West Virginia Consumer Credit and Protection Act (W. Va. Code §46A-1-101 et seq.) and related consumer protection statutes.",
+      "For West Virginia users, our calculations reference applicable state laws including the West Virginia Consumer Credit and Protection Act (W. Va. Code 46A-1-101 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in West Virginia. Our calculator uses documented settlement data within West Virginia's regulatory framework."
     ],
     
@@ -1046,7 +1046,7 @@ export const remaining40StatesPart2 = {
     faqs: [
       {
         question: "How does debt settlement work in Wisconsin?",
-        answer: "Debt settlement in Wisconsin operates through negotiations with creditors to accept reduced balances, regulated under Wisconsin consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Wisconsin law prohibits unfair and deceptive practices through the Wisconsin Consumer Act (Wis. Stat. §421.101 et seq.). Wisconsin also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Wisconsin residents."
+        answer: "Debt settlement in Wisconsin operates through negotiations with creditors to accept reduced balances, regulated under Wisconsin consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Wisconsin law prohibits unfair and deceptive practices through the Wisconsin Consumer Act (Wis. Stat. 421.101 et seq.). Wisconsin also requires collection agencies to be licensed and follow specific rules. Settlement companies should provide clear disclosures about fees and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Wisconsin residents."
       },
       {
         question: "How long does debt settlement take in Wisconsin?",
@@ -1054,7 +1054,7 @@ export const remaining40StatesPart2 = {
       },
       {
         question: "What protections does Wisconsin provide against debt collectors?",
-        answer: "Wisconsin provides consumer protections through the Wisconsin Consumer Act (Wis. Stat. §421.101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Wisconsin residents, prohibiting harassment, threats, false statements, and unfair methods. Wisconsin law requires collection agencies to be licensed and follow detailed rules about contact methods, validation requirements, and prohibited conduct. Wisconsin courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Wisconsin limits wage garnishment to the lesser of 20% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage-providing stronger protection than the federal 25% standard. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Wisconsin's protective regulatory framework."
+        answer: "Wisconsin provides consumer protections through the Wisconsin Consumer Act (Wis. Stat. 421.101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Wisconsin residents, prohibiting harassment, threats, false statements, and unfair methods. Wisconsin law requires collection agencies to be licensed and follow detailed rules about contact methods, validation requirements, and prohibited conduct. Wisconsin courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Wisconsin limits wage garnishment to the lesser of 20% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage-providing stronger protection than the federal 25% standard. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Wisconsin's protective regulatory framework."
       },
       {
         question: "What should Wisconsin residents know about debt relief?",
@@ -1063,7 +1063,7 @@ export const remaining40StatesPart2 = {
     ],
     
     statutes: [
-      "For Wisconsin users, our calculations reference applicable state laws including the Wisconsin Consumer Act (Wis. Stat. §421.101 et seq.) and related consumer protection statutes.",
+      "For Wisconsin users, our calculations reference applicable state laws including the Wisconsin Consumer Act (Wis. Stat. 421.101 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and debt collection practices in Wisconsin. Our calculator uses documented settlement data within Wisconsin's regulatory framework."
     ],
     
@@ -1149,21 +1149,21 @@ export const wisconsin = remaining40StatesPart2.wisconsin;
 export const wyoming = remaining40StatesPart2.wyoming;
 
 /**
- * ✅ PART 2 COMPLETE: All 28 states finished!
+ *  PART 2 COMPLETE: All 28 states finished!
  * 
- * Total: 112 unique FAQs created (28 states × 4 FAQs each)
+ * Total: 112 unique FAQs created (28 states  4 FAQs each)
  * Total unique content: ~19,300 words
  * 
  * Combined with Part 1 (12 states, 48 FAQs):
- * - Total Phase 6D: 40/40 states ✅ COMPLETE
+ * - Total Phase 6D: 40/40 states  COMPLETE
  * - Total Phase 6D FAQs: 160 unique FAQs
  * - Total Phase 6D content: ~27,500 words
  * 
  * Combined with Big 10 (10 states, 50 FAQs):
- * - TOTAL US STATES: 50/50 ✅ COMPLETE
+ * - TOTAL US STATES: 50/50  COMPLETE
  * - TOTAL US FAQs: 210 unique FAQs
  * - TOTAL US unique content: ~36,000 words
  * 
- * Phase 6D: ✅ 100% COMPLETE
+ * Phase 6D:  100% COMPLETE
  * Next: Phase 6E (Canadian Provinces - 9 provinces excluding Quebec)
  */

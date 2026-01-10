@@ -23,27 +23,27 @@ const NationalToolPage = () => {
     },
     {
       question: "How long does it take to get my estimate?",
-      answer: "Most people complete the calculator in 2-3 minutes. The tool uses a 12-question flow designed to be quick while gathering the information needed for accurate estimates. Each question is straightforward—many use sliders or dropdown menus for faster input. You can move back and forth between questions if you need to review or change answers. Once you complete all questions and submit, your personalized estimate appears immediately on screen. There's no waiting period, email verification, or credit check required. The entire process from start to viewing your results typically takes less than five minutes, even if you need to look up exact figures from statements."
+      answer: "Most people complete the calculator in 2-3 minutes. The tool uses a 12-question flow designed to be quick while gathering the information needed for accurate estimates. Each question is straightforward-many use sliders or dropdown menus for faster input. You can move back and forth between questions if you need to review or change answers. Once you complete all questions and submit, your personalized estimate appears immediately on screen. There's no waiting period, email verification, or credit check required. The entire process from start to viewing your results typically takes less than five minutes, even if you need to look up exact figures from statements."
     },
     {
       question: "How accurate is my debt relief estimate?",
-      answer: "Our estimates are based on industry data, settlement patterns, and mathematical modeling reviewed by a Certified Public Accountant. However, accuracy depends on factors the calculator cannot predict. The settlement percentages we use reflect historical averages from FTC and CFPB data—what creditors have typically accepted. Your actual results will vary based on whether your specific creditors agree to negotiate, what settlement percentage they'll accept, how your financial situation evolves during a program, and whether you can maintain payments throughout the process. Think of the estimate as an educated projection based on thousands of similar cases, not a guarantee. The math is correct, but real-world outcomes depend on creditor participation and your individual circumstances."
+      answer: "Our estimates are based on industry data, settlement patterns, and mathematical modeling reviewed by a Certified Public Accountant. However, accuracy depends on factors the calculator cannot predict. The settlement percentages we use reflect historical averages from FTC and CFPB data-what creditors have typically accepted. Your actual results will vary based on whether your specific creditors agree to negotiate, what settlement percentage they'll accept, how your financial situation evolves during a program, and whether you can maintain payments throughout the process. Think of the estimate as an educated projection based on thousands of similar cases, not a guarantee. The math is correct, but real-world outcomes depend on creditor participation and your individual circumstances."
     },
     {
       question: "Do I have to opt in to use the calculator?",
-      answer: "No. You can use the calculator and view your complete results without opting in to anything. The calculator's purpose is education—helping you understand potential debt relief scenarios before making any decisions. At the final step, you'll provide contact information to see your results, but there's an optional consent checkbox if you'd like to receive a one-time phone call to discuss your estimate. This consent is explicitly optional and clearly marked. You can check it or leave it unchecked—either way, you'll see your full results. Consent is not a condition of using the calculator. We believe you should understand your options first, then decide if you want to speak with someone."
+      answer: "No. You can use the calculator and view your complete results without opting in to anything. The calculator's purpose is education-helping you understand potential debt relief scenarios before making any decisions. At the final step, you'll provide contact information to see your results, but there's an optional consent checkbox if you'd like to receive a one-time phone call to discuss your estimate. This consent is explicitly optional and clearly marked. You can check it or leave it unchecked-either way, you'll see your full results. Consent is not a condition of using the calculator. We believe you should understand your options first, then decide if you want to speak with someone."
     },
     {
       question: "What happens after I complete the calculator?",
-      answer: "After completing all 12 questions, you'll immediately see your personalized results screen showing a side-by-side comparison of your current path versus potential relief path, estimated monthly savings and total debt reduction, projected timeline to becoming debt-free, and an explanation of how we calculated your specific estimates. Based on your situation, you may see either a phone number to call a debt relief specialist (if your profile suggests settlement might be beneficial) or an optional form to request a consultation (for exploratory cases). You're never obligated to take any action—the results are educational. If you opted in for contact, a representative may call to discuss your estimate. If you didn't opt in, that's the end of the process unless you choose to reach out."
+      answer: "After completing all 12 questions, you'll immediately see your personalized results screen showing a side-by-side comparison of your current path versus potential relief path, estimated monthly savings and total debt reduction, projected timeline to becoming debt-free, and an explanation of how we calculated your specific estimates. Based on your situation, you may see either a phone number to call a debt relief specialist (if your profile suggests settlement might be beneficial) or an optional form to request a consultation (for exploratory cases). You're never obligated to take any action-the results are educational. If you opted in for contact, a representative may call to discuss your estimate. If you didn't opt in, that's the end of the process unless you choose to reach out."
     },
     {
       question: "What's the difference between 'Current Path' and 'Relief Path'?",
-      answer: "The Current Path shows what happens if you continue making minimum payments on your debt without seeking relief. We calculate how long it takes to pay off your debt with compound interest, the total amount you'll pay (principal plus all interest), and your monthly payment amount. This path assumes nothing changes—same interest rates, same minimum payments. The Relief Path models a debt settlement scenario where you work with a settlement company to negotiate reduced balances with your creditors. This calculation factors in typical settlement percentages based on your debt age and payment status, settlement company fees (usually 20-25% of enrolled debt), and a realistic monthly payment based on your disposable income. The side-by-side comparison shows potential savings and trade-offs between these approaches."
+      answer: "The Current Path shows what happens if you continue making minimum payments on your debt without seeking relief. We calculate how long it takes to pay off your debt with compound interest, the total amount you'll pay (principal plus all interest), and your monthly payment amount. This path assumes nothing changes-same interest rates, same minimum payments. The Relief Path models a debt settlement scenario where you work with a settlement company to negotiate reduced balances with your creditors. This calculation factors in typical settlement percentages based on your debt age and payment status, settlement company fees (usually 20-25% of enrolled debt), and a realistic monthly payment based on your disposable income. The side-by-side comparison shows potential savings and trade-offs between these approaches."
     },
     {
       question: "Does my estimate include settlement company fees?",
-      answer: "Yes. All cost estimates in the Relief Path include settlement company fees, which typically range from 20-25% of your enrolled debt amount. Many calculators show only the settled debt amount, making relief programs look cheaper than they actually are. We include fees because we want you to see the complete financial picture. Our estimates show the settled amount (what you'll pay creditors), the settlement company fees, and the total program cost (both combined). This transparency means your estimated 'total reduction' accounts for fees—it's your true savings compared to paying debts in full. When you see potential savings on the results screen, those numbers already factor in all costs, not just the negotiated debt reduction."
+      answer: "Yes. All cost estimates in the Relief Path include settlement company fees, which typically range from 20-25% of your enrolled debt amount. Many calculators show only the settled debt amount, making relief programs look cheaper than they actually are. We include fees because we want you to see the complete financial picture. Our estimates show the settled amount (what you'll pay creditors), the settlement company fees, and the total program cost (both combined). This transparency means your estimated 'total reduction' accounts for fees-it's your true savings compared to paying debts in full. When you see potential savings on the results screen, those numbers already factor in all costs, not just the negotiated debt reduction."
     }
   ];
 
@@ -491,14 +491,14 @@ const NationalToolPage = () => {
       <div className="breadcrumb">
         <nav className="breadcrumb-nav" aria-label="Breadcrumb">
           <a href="/debt-calculators/" className="breadcrumb-link">Debt Calculators</a>
-          <span className="breadcrumb-separator">›</span>
+          <span className="breadcrumb-separator">></span>
           <span className="breadcrumb-current">Debt Relief Calculator</span>
         </nav>
       </div>
 
       {/* Page Header */}
       <header className="page-header">
-        <h1>Debt Relief Calculator — Estimate Your Savings</h1>
+        <h1>Debt Relief Calculator - Estimate Your Savings</h1>
         <p className="page-header-subtitle">
           Model how debt settlement could affect your monthly payments and payoff timeline. 
           Get your personalized estimate in 2 minutes.
@@ -517,7 +517,7 @@ const NationalToolPage = () => {
         <h3>What We Calculate</h3>
         <p>
           This calculator models two distinct financial scenarios to help you understand your options. 
-          First, we calculate your <strong>current path</strong>—what happens if you continue making 
+          First, we calculate your <strong>current path</strong>-what happens if you continue making 
           minimum payments on your existing debt. This shows how long it will take to become debt-free, 
           how much total interest you'll pay, and what your financial trajectory looks like without 
           intervention.
@@ -546,7 +546,7 @@ const NationalToolPage = () => {
         <p>
           Situational variables shape settlement likelihood: how old your oldest unpaid debt is, your 
           current payment status (current, occasionally late, frequently missing, or 60+ days behind), 
-          and your employment status. Creditors negotiate differently based on these factors—older debts 
+          and your employment status. Creditors negotiate differently based on these factors-older debts 
           in default typically settle for larger reductions than recent debts where you're current on payments.
         </p>
         <p>
@@ -575,11 +575,11 @@ const NationalToolPage = () => {
           Results also include a confidence score that determines whether we suggest speaking with a debt 
           relief specialist (high confidence) or simply offer an optional consultation form (exploratory 
           cases). This routing is based on factors like debt amount, payment status, and debt-to-income 
-          ratio—indicators that settlement might be particularly beneficial in your situation.
+          ratio-indicators that settlement might be particularly beneficial in your situation.
         </p>
 
         <a href="/debt-calculators/" className="methodology-link">
-          Explore all our debt calculators →
+          Explore all our debt calculators 
         </a>
       </section>
 
@@ -593,7 +593,7 @@ const NationalToolPage = () => {
           use standard amortization formulas with compound interest to calculate exactly how long it takes 
           to pay off your debt making minimum payments. Every month, interest accrues on your remaining 
           balance, and only the portion of your payment exceeding that interest reduces your principal. 
-          This path shows the reality of minimum payments—often taking 5-10+ years with total costs far 
+          This path shows the reality of minimum payments-often taking 5-10+ years with total costs far 
           exceeding your original debt amount due to accumulated interest.
         </p>
         <p>
@@ -601,11 +601,11 @@ const NationalToolPage = () => {
           to creditors and instead save money in a dedicated account. Once sufficient funds accumulate, a 
           settlement company negotiates lump-sum payments with your creditors for less than the full balance. 
           This path typically takes 24-48 months, reduces your total debt burden, and can lower monthly 
-          payments—but it involves stopping payments (which damages credit), settlement company fees, and 
+          payments-but it involves stopping payments (which damages credit), settlement company fees, and 
           the uncertainty of creditor cooperation.
         </p>
         <p>
-          Neither path is universally "better"—the right choice depends on your specific situation, financial 
+          Neither path is universally "better"-the right choice depends on your specific situation, financial 
           goals, and circumstances. The comparison helps you understand the trade-offs: the current path 
           maintains your credit but may be financially unsustainable, while the relief path offers potential 
           savings but comes with credit consequences and fees.
@@ -614,13 +614,13 @@ const NationalToolPage = () => {
         <h3>Settlement Percentages Explained</h3>
         <p>
           Settlement percentages represent what portion of your debt you'd actually pay after negotiation. 
-          For example, a 50% settlement percentage means you'd pay 50 cents on the dollar—a $10,000 debt 
+          For example, a 50% settlement percentage means you'd pay 50 cents on the dollar-a $10,000 debt 
           might settle for $5,000. These percentages aren't arbitrary; they're based on documented patterns 
           from Federal Trade Commission and Consumer Financial Protection Bureau data showing what creditors 
           have historically accepted.
         </p>
         <p>
-          Several factors influence settlement percentages. <strong>Debt age</strong> is crucial—creditors 
+          Several factors influence settlement percentages. <strong>Debt age</strong> is crucial-creditors 
           are more willing to negotiate on older debts, especially those approaching statute of limitations. 
           <strong>Payment status</strong> matters significantly; accounts in severe default (60+ days behind) 
           typically settle for larger reductions than current accounts. <strong>Debt type</strong> affects 
@@ -630,7 +630,7 @@ const NationalToolPage = () => {
         <p>
           Our calculator uses a lookup table with base percentages by debt age, then applies modifiers for 
           payment status, debt type, documented hardship, and high debt-to-income ratios. The final percentage 
-          is clamped between 40% and 75%—meaning settlements range from paying 40 cents on the dollar (best 
+          is clamped between 40% and 75%-meaning settlements range from paying 40 cents on the dollar (best 
           case, 60% debt reduction) to 75 cents on the dollar (conservative case, 25% reduction). Your individual 
           percentage depends on your specific circumstances as entered in the calculator.
         </p>
@@ -651,7 +651,7 @@ const NationalToolPage = () => {
         <p>
           The "estimated total reduction" you see in results accounts for these fees. If we show potential 
           savings of $8,250, that's your true savings after paying both creditors and settlement company 
-          fees—compared to paying your debts in full via minimum payments. This honest accounting helps you 
+          fees-compared to paying your debts in full via minimum payments. This honest accounting helps you 
           make informed decisions rather than discovering hidden costs later in the process.
         </p>
       </section>
@@ -708,7 +708,7 @@ const NationalToolPage = () => {
               ))}
             </div>
             <a href="#all-states" className="methodology-link" style={{display: 'block', marginTop: '16px'}}>
-              See all 50 states →
+              See all 50 states 
             </a>
           </div>
 
@@ -741,7 +741,7 @@ const NationalToolPage = () => {
       <footer className="compliance-footer">
         <div className="compliance-content">
           <div className="compliance-disclaimer">
-            <h3>⚠️ Important Disclosure</h3>
+            <h3> Important Disclosure</h3>
             <p>
               Debt Calculator Lab is not a law firm or financial advisor. Results shown are modeled 
               estimates for educational purposes only. Actual results depend on creditor participation, 

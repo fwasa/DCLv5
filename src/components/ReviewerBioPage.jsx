@@ -408,9 +408,9 @@ const ReviewerBioPage = () => {
       <div className="breadcrumb">
         <nav className="breadcrumb-nav" aria-label="Breadcrumb">
           <a href="/debt-calculators/" className="breadcrumb-link">Debt Calculators</a>
-          <span className="breadcrumb-separator">›</span>
+          <span className="breadcrumb-separator">></span>
           <a href="/reviewers/" className="breadcrumb-link">Our Reviewers</a>
-          <span className="breadcrumb-separator">›</span>
+          <span className="breadcrumb-separator">></span>
           <span>{reviewer.name}</span>
         </nav>
       </div>
@@ -500,7 +500,7 @@ const ReviewerBioPage = () => {
 
           <p style={{ marginTop: '24px', fontSize: '15px', color: '#718096' }}>
             <strong>Important:</strong> {reviewer.name}'s review confirms mathematical accuracy and 
-            methodological soundness—it does not constitute financial advice or guarantee any 
+            methodological soundness-it does not constitute financial advice or guarantee any 
             individual outcomes. Calculator users should consult qualified professionals before 
             making financial decisions.
           </p>
@@ -543,7 +543,7 @@ const ReviewerBioPage = () => {
             <a href="/privacy-policy/" className="footer-link">Privacy</a>
           </div>
           <div className="footer-bottom">
-            <p>© 2024 LENURA VENTURES INC. DebtCalculatorLab is a trademark of LENURA VENTURES INC.</p>
+            <p> 2024 LENURA VENTURES INC. DebtCalculatorLab is a trademark of LENURA VENTURES INC.</p>
           </div>
         </div>
       </footer>

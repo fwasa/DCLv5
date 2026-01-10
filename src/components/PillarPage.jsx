@@ -14,7 +14,7 @@ const PillarPageDebtCalculators = () => {
   const faqs = [
     {
       question: "What does a debt calculator do?",
-      answer: "A debt calculator is an educational tool that models potential debt relief scenarios based on your financial information. It takes your debt amount, interest rates, payment status, and other factors to create estimates showing different paths forward. These calculators help you visualize what your current trajectory looks like versus potential relief options, allowing you to explore scenarios before making any commitments. The calculations are based on industry data, settlement patterns, and mathematical modeling-”not guarantees or financial advice."
+      answer: "A debt calculator is an educational tool that models potential debt relief scenarios based on your financial information. It takes your debt amount, interest rates, payment status, and other factors to create estimates showing different paths forward. These calculators help you visualize what your current trajectory looks like versus potential relief options, allowing you to explore scenarios before making any commitments. The calculations are based on industry data, settlement patterns, and mathematical modeling-not guarantees or financial advice."
     },
     {
       question: "What types of debt calculators are available?",
@@ -22,11 +22,11 @@ const PillarPageDebtCalculators = () => {
     },
     {
       question: "Is using a debt calculator the same as getting financial advice?",
-      answer: "No. Debt calculators provide modeled estimates based on mathematical formulas and industry data-”they are educational tools, not personalized financial advice. A calculator can show you what might happen under different scenarios, but it cannot tell you what you should do, evaluate your complete financial picture, or consider factors unique to your situation. Financial advisors, credit counselors, and certified public accountants provide advice tailored to your specific circumstances. Think of calculators as a starting point for understanding your options, not a replacement for professional guidance."
+      answer: "No. Debt calculators provide modeled estimates based on mathematical formulas and industry data-they are educational tools, not personalized financial advice. A calculator can show you what might happen under different scenarios, but it cannot tell you what you should do, evaluate your complete financial picture, or consider factors unique to your situation. Financial advisors, credit counselors, and certified public accountants provide advice tailored to your specific circumstances. Think of calculators as a starting point for understanding your options, not a replacement for professional guidance."
     },
     {
       question: "How accurate are debt calculators?",
-      answer: "Debt calculators provide reasonable estimates based on industry averages, settlement patterns, and mathematical modeling. However, actual results depend on many factors the calculator cannot predict: whether your specific creditors will negotiate, what settlement percentages they'll accept, how your personal circumstances evolve, and whether you can complete a relief program. Our calculators are reviewed for mathematical accuracy by a Certified Public Accountant, but this review confirms the calculations work correctly-”not that any individual will achieve the estimated results. Use calculator estimates as a general guide, not a guarantee."
+      answer: "Debt calculators provide reasonable estimates based on industry averages, settlement patterns, and mathematical modeling. However, actual results depend on many factors the calculator cannot predict: whether your specific creditors will negotiate, what settlement percentages they'll accept, how your personal circumstances evolve, and whether you can complete a relief program. Our calculators are reviewed for mathematical accuracy by a Certified Public Accountant, but this review confirms the calculations work correctly-not that any individual will achieve the estimated results. Use calculator estimates as a general guide, not a guarantee."
     },
     {
       question: "Is my information safe when I use a debt calculator?",
@@ -42,7 +42,7 @@ const PillarPageDebtCalculators = () => {
     },
     {
       question: "What should I do after getting my estimate?",
-      answer: "After reviewing your calculator results, consider these next steps: First, review the methodology to understand how the estimate was created. Second, compare multiple scenarios by adjusting variables to see how different factors affect outcomes. Third, research the specific relief strategies the calculator modeled. Fourth, consult with qualified professionals-”credit counselors (often free through nonprofit agencies), licensed debt relief companies for detailed program information, or financial advisors for comprehensive planning. Finally, evaluate your full situation including income stability, expense flexibility, and stress tolerance. Calculator estimates are a starting point, not an endpoint."
+      answer: "After reviewing your calculator results, consider these next steps: First, review the methodology to understand how the estimate was created. Second, compare multiple scenarios by adjusting variables to see how different factors affect outcomes. Third, research the specific relief strategies the calculator modeled. Fourth, consult with qualified professionals-credit counselors (often free through nonprofit agencies), licensed debt relief companies for detailed program information, or financial advisors for comprehensive planning. Finally, evaluate your full situation including income stability, expense flexibility, and stress tolerance. Calculator estimates are a starting point, not an endpoint."
     },
     {
       question: "When should I talk to a professional instead of using a calculator?",
@@ -50,7 +50,7 @@ const PillarPageDebtCalculators = () => {
     },
     {
       question: "Why should I trust DebtCalculatorLab's calculators?",
-      answer: "DebtCalculatorLab's calculators are built on several trust principles: transparent methodology that explains exactly how estimates are calculated, mathematical accuracy reviewed by a Certified Public Accountant, data sources from credible institutions like the Federal Trade Commission and Consumer Financial Protection Bureau, clear disclaimers about what calculators can and cannot do, and privacy-first design that never sells your information. We're not a debt relief company trying to enroll you in a program-”we're an independent calculator platform focused on education. Our success depends on providing accurate, honest estimates that help people make informed decisions, not on making unrealistic promises."
+      answer: "DebtCalculatorLab's calculators are built on several trust principles: transparent methodology that explains exactly how estimates are calculated, mathematical accuracy reviewed by a Certified Public Accountant, data sources from credible institutions like the Federal Trade Commission and Consumer Financial Protection Bureau, clear disclaimers about what calculators can and cannot do, and privacy-first design that never sells your information. We're not a debt relief company trying to enroll you in a program-we're an independent calculator platform focused on education. Our success depends on providing accurate, honest estimates that help people make informed decisions, not on making unrealistic promises."
     }
   ];
 
@@ -566,7 +566,7 @@ const PillarPageDebtCalculators = () => {
         <p className="intro-text">
           Explore educational debt analysis tools designed to help you model potential debt relief 
           scenarios. Our calculators provide transparent estimates based on industry data and 
-          mathematical modeling-”not guarantees or financial advice. Each tool is reviewed for 
+          mathematical modeling-not guarantees or financial advice. Each tool is reviewed for 
           accuracy by a Certified Public Accountant.
         </p>
 
@@ -584,7 +584,7 @@ const PillarPageDebtCalculators = () => {
           <p>
             Think of these calculators as financial "what-if" scenarios. They show you what could 
             happen if you continue making minimum payments versus pursuing debt settlement or other 
-            relief strategies. The estimates are based on real industry data-”settlement percentages 
+            relief strategies. The estimates are based on real industry data-settlement percentages 
             that creditors have historically accepted, typical program durations, and standard fee 
             structures.
           </p>
@@ -597,20 +597,20 @@ const PillarPageDebtCalculators = () => {
           <h3>How We Approach Debt Modeling</h3>
           <p>
             Our calculators use transparent, mathematically sound approaches to debt modeling. We 
-            don't hide our methodology or make our formulas mysterious-”we believe you deserve to 
+            don't hide our methodology or make our formulas mysterious-we believe you deserve to 
             understand exactly how your estimates are calculated.
           </p>
           <p>
             For current-path calculations, we model standard amortization with compound interest, 
             showing how long it takes to pay off debt making minimum payments. For relief-path 
             calculations, we use settlement percentage lookup tables based on debt age, payment 
-            status, and debt type-”factors that influence how willing creditors are to negotiate. 
+            status, and debt type-factors that influence how willing creditors are to negotiate. 
             We include industry-standard fees (typically 20-25% of enrolled debt) in all cost 
             estimates so you see the complete financial picture.
           </p>
           <p>
             Every calculation is reviewed for mathematical accuracy by a Certified Public Accountant. 
-            This doesn't mean the CPA guarantees you'll achieve these results-”that depends on factors 
+            This doesn't mean the CPA guarantees you'll achieve these results-that depends on factors 
             beyond any calculator's control. But it does mean the math is correct and the logic is sound.
           </p>
 
@@ -619,7 +619,7 @@ const PillarPageDebtCalculators = () => {
             It's critical to understand what debt calculators cannot do. They cannot predict whether 
             your specific creditors will negotiate or settle. They cannot determine if you'll qualify 
             for any particular relief program. They cannot account for sudden changes in your financial 
-            situation-”job loss, medical emergencies, or unexpected expenses.
+            situation-job loss, medical emergencies, or unexpected expenses.
           </p>
           <p>
             Calculators model scenarios based on industry averages and mathematical formulas. Your 
@@ -630,7 +630,7 @@ const PillarPageDebtCalculators = () => {
           <p>
             <strong>These calculators provide modeled estimates, not financial advice.</strong> They 
             cannot tell you what you should do or evaluate your complete financial picture. Think of 
-            them as educational tools that help you understand possibilities-”not as replacements for 
+            them as educational tools that help you understand possibilities-not as replacements for 
             professional guidance from credit counselors, financial advisors, or attorneys.
           </p>
         </section>
@@ -699,14 +699,14 @@ const PillarPageDebtCalculators = () => {
             We update our data sources regularly to ensure calculations reflect current industry 
             conditions. However, debt relief patterns can shift over time based on economic conditions, 
             creditor policies, and regulatory changes. Our calculators provide estimates based on 
-            historical patterns-”not predictions about future creditor behavior.
+            historical patterns-not predictions about future creditor behavior.
           </p>
 
           <h3>Calculation Principles</h3>
           <p>
             Every calculator follows core principles designed to provide realistic, honest estimates. 
             We use conservative assumptions rather than optimistic ones. For example, our settlement 
-            percentage lookup tables reflect what creditors have historically accepted on average-”not 
+            percentage lookup tables reflect what creditors have historically accepted on average-not 
             best-case scenarios. We include all relevant costs including settlement company fees, not 
             just the settled debt amount.
           </p>
@@ -714,11 +714,11 @@ const PillarPageDebtCalculators = () => {
             Our calculations model scenarios, they don't make promises. We show ranges where appropriate 
             (such as monthly savings estimates) to reflect variability in outcomes. We disclose our 
             methodology openly rather than treating calculations as proprietary "black boxes." And we 
-            always frame results as estimates for educational purposes-”never as guarantees or predictions.
+            always frame results as estimates for educational purposes-never as guarantees or predictions.
           </p>
           <p>
-            The variables we use-”debt amount, interest rates, payment status, debt age, employment 
-            status, income, expenses, and hardship factors-”are the same factors that influence real-world 
+            The variables we use-debt amount, interest rates, payment status, debt age, employment 
+            status, income, expenses, and hardship factors-are the same factors that influence real-world 
             debt relief outcomes. We weight these variables based on their documented impact on settlement 
             likelihood and program success rates.
           </p>
@@ -772,8 +772,8 @@ const PillarPageDebtCalculators = () => {
             <li>Looking for realistic estimates rather than marketing promises</li>
           </ul>
           <p>
-            These calculators work best for people with unsecured debt-”credit cards, personal loans, 
-            medical bills-”typically between $5,000 and $150,000. They're educational tools for 
+            These calculators work best for people with unsecured debt-credit cards, personal loans, 
+            medical bills-typically between $5,000 and $150,000. They're educational tools for 
             exploration and understanding, not enrollment or commitment.
           </p>
 
@@ -887,7 +887,7 @@ const PillarPageDebtCalculators = () => {
           </div>
 
           <div className="footer-bottom">
-            <p>© 2024 LENURA VENTURES INC. DebtCalculatorLab and Debt Relief Savings Estimator are trademarks of LENURA VENTURES INC.</p>
+            <p> 2024 LENURA VENTURES INC. DebtCalculatorLab and Debt Relief Savings Estimator are trademarks of LENURA VENTURES INC.</p>
             <p style={{marginTop: '12px', fontSize: '13px', color: '#718096'}}>
               DebtCalculatorLab is not a law firm, financial advisor, or credit counseling service. 
               Calculators provide educational estimates only.

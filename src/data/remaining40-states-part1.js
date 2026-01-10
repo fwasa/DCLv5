@@ -66,7 +66,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Alaska provide for consumers in debt?",
-        answer: "Alaska provides consumer protections through the Unfair Trade Practices and Consumer Protection Act (Alaska Statutes §45.50.471 et seq.), which prohibits deceptive and unfair practices in debt collection and settlement. Federal Fair Debt Collection Practices Act protections also apply to all Alaska residents. Alaska law requires debt collectors to follow specific rules and prohibits harassment, false statements, and unfair methods. Alaska limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Alaska's geographic isolation can sometimes complicate debt collection, potentially affecting settlement dynamics. These protections don't eliminate debt but prevent abusive tactics during the settlement process. Our calculator estimates debt reduction through settlement within Alaska's protective regulatory framework."
+        answer: "Alaska provides consumer protections through the Unfair Trade Practices and Consumer Protection Act (Alaska Statutes 45.50.471 et seq.), which prohibits deceptive and unfair practices in debt collection and settlement. Federal Fair Debt Collection Practices Act protections also apply to all Alaska residents. Alaska law requires debt collectors to follow specific rules and prohibits harassment, false statements, and unfair methods. Alaska limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Alaska's geographic isolation can sometimes complicate debt collection, potentially affecting settlement dynamics. These protections don't eliminate debt but prevent abusive tactics during the settlement process. Our calculator estimates debt reduction through settlement within Alaska's protective regulatory framework."
       },
       {
         question: "What should Alaska residents know about debt relief?",
@@ -75,7 +75,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Alaska users, our calculations reference applicable state laws including Alaska's Unfair Trade Practices and Consumer Protection Act (AS §45.50.471 et seq.) and related consumer protection statutes.",
+      "For Alaska users, our calculations reference applicable state laws including Alaska's Unfair Trade Practices and Consumer Protection Act (AS 45.50.471 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit unfair practices in Alaska. Our calculator uses documented settlement data within Alaska's regulatory framework."
     ],
     
@@ -92,7 +92,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Arizona?",
-        answer: "Debt settlement in Arizona involves negotiating with creditors to accept less than full balances, operating under Arizona's consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs. Our calculator estimates settlement percentages based on debt age, payment status, and amount. Arizona law prohibits unfair and deceptive trade practices through the Arizona Consumer Fraud Act (ARS §44-1522). Arizona also requires debt buyers to provide specific documentation before suing. Settlement companies should be transparent about fees and realistic about timelines. Individual results vary significantly depending on whether your specific creditors choose to settle-some have policies favoring settlement while others refuse. Our calculator shows potential scenarios using documented settlement patterns for Arizona residents."
+        answer: "Debt settlement in Arizona involves negotiating with creditors to accept less than full balances, operating under Arizona's consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs. Our calculator estimates settlement percentages based on debt age, payment status, and amount. Arizona law prohibits unfair and deceptive trade practices through the Arizona Consumer Fraud Act (ARS 44-1522). Arizona also requires debt buyers to provide specific documentation before suing. Settlement companies should be transparent about fees and realistic about timelines. Individual results vary significantly depending on whether your specific creditors choose to settle-some have policies favoring settlement while others refuse. Our calculator shows potential scenarios using documented settlement patterns for Arizona residents."
       },
       {
         question: "How long does debt settlement take in Arizona?",
@@ -100,7 +100,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Arizona provide against debt collectors?",
-        answer: "Arizona provides consumer protections through the Arizona Consumer Fraud Act (ARS §44-1522 et seq.) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Arizona residents, prohibiting harassment, threats, and false statements. Arizona law also has specific requirements for debt buyers-they must provide detailed documentation of debt ownership before suing. Arizona courts require substantial proof in debt collection lawsuits, making it harder for collectors to win without proper documentation. Arizona limits wage garnishment to 25% of disposable earnings or the amount by which weekly wages exceed 30 times federal minimum wage, whichever is less. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Arizona's regulatory framework."
+        answer: "Arizona provides consumer protections through the Arizona Consumer Fraud Act (ARS 44-1522 et seq.) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Arizona residents, prohibiting harassment, threats, and false statements. Arizona law also has specific requirements for debt buyers-they must provide detailed documentation of debt ownership before suing. Arizona courts require substantial proof in debt collection lawsuits, making it harder for collectors to win without proper documentation. Arizona limits wage garnishment to 25% of disposable earnings or the amount by which weekly wages exceed 30 times federal minimum wage, whichever is less. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Arizona's regulatory framework."
       },
       {
         question: "What should Arizona residents know about debt relief?",
@@ -109,7 +109,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Arizona users, our calculations reference applicable state laws including the Arizona Consumer Fraud Act (ARS §44-1522 et seq.) and related consumer protection statutes governing debt collection practices.",
+      "For Arizona users, our calculations reference applicable state laws including the Arizona Consumer Fraud Act (ARS 44-1522 et seq.) and related consumer protection statutes governing debt collection practices.",
       "These laws regulate consumer protection and prohibit deceptive practices in Arizona. Our calculator uses documented settlement data within Arizona's regulatory framework."
     ],
     
@@ -131,7 +131,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Arkansas?",
-        answer: "Debt settlement in Arkansas operates through negotiations with creditors to accept reduced balances, regulated under Arkansas consumer protection laws. The process involves ceasing payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Arkansas law prohibits unfair and deceptive practices through the Arkansas Deceptive Trade Practices Act (Ark. Code §4-88-101 et seq.). Arkansas also requires collection agencies to be licensed. Settlement companies should provide clear disclosures about fees, timeline expectations, and realistic success rates. Individual results vary greatly depending on whether your particular creditors choose to negotiate-our calculator shows potential scenarios using documented industry patterns for Arkansas residents, not guaranteed outcomes."
+        answer: "Debt settlement in Arkansas operates through negotiations with creditors to accept reduced balances, regulated under Arkansas consumer protection laws. The process involves ceasing payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Arkansas law prohibits unfair and deceptive practices through the Arkansas Deceptive Trade Practices Act (Ark. Code 4-88-101 et seq.). Arkansas also requires collection agencies to be licensed. Settlement companies should provide clear disclosures about fees, timeline expectations, and realistic success rates. Individual results vary greatly depending on whether your particular creditors choose to negotiate-our calculator shows potential scenarios using documented industry patterns for Arkansas residents, not guaranteed outcomes."
       },
       {
         question: "How long does debt settlement take in Arkansas?",
@@ -139,7 +139,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Arkansas provide for consumers in debt?",
-        answer: "Arkansas provides consumer protections through the Arkansas Deceptive Trade Practices Act (Ark. Code §4-88-101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection and settlement. Federal Fair Debt Collection Practices Act protections apply to all Arkansas residents, prohibiting harassment, threats, false statements, and unfair methods. Arkansas law requires collection agencies to be licensed, providing regulatory oversight. Arkansas courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Arkansas limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Arkansas's regulatory framework."
+        answer: "Arkansas provides consumer protections through the Arkansas Deceptive Trade Practices Act (Ark. Code 4-88-101 et seq.) which prohibits unfair and deceptive practices in consumer transactions, including debt collection and settlement. Federal Fair Debt Collection Practices Act protections apply to all Arkansas residents, prohibiting harassment, threats, false statements, and unfair methods. Arkansas law requires collection agencies to be licensed, providing regulatory oversight. Arkansas courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Arkansas limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Arkansas's regulatory framework."
       },
       {
         question: "What should Arkansas residents know about debt relief?",
@@ -148,7 +148,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Arkansas users, our calculations reference applicable state laws including the Arkansas Deceptive Trade Practices Act (Ark. Code §4-88-101 et seq.) and related consumer protection statutes.",
+      "For Arkansas users, our calculations reference applicable state laws including the Arkansas Deceptive Trade Practices Act (Ark. Code 4-88-101 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Arkansas. Our calculator uses documented settlement data within Arkansas's regulatory framework."
     ],
     
@@ -172,7 +172,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Colorado?",
-        answer: "Debt settlement in Colorado involves negotiating with creditors to accept reduced lump-sum payments, operating under the Colorado Consumer Protection Act and related laws. You stop making payments to creditors while saving money in a dedicated account, then settlement companies negotiate with creditors when sufficient funds accumulate. Our calculator estimates settlement percentages based on your debt age, payment status, and total amount. Colorado law prohibits deceptive trade practices (Colo. Rev. Stat. §6-1-105) and requires collection agencies to be licensed. Colorado also has specific requirements for debt collection conduct. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to participate in settlement-our calculator shows potential scenarios using documented industry data for Colorado residents."
+        answer: "Debt settlement in Colorado involves negotiating with creditors to accept reduced lump-sum payments, operating under the Colorado Consumer Protection Act and related laws. You stop making payments to creditors while saving money in a dedicated account, then settlement companies negotiate with creditors when sufficient funds accumulate. Our calculator estimates settlement percentages based on your debt age, payment status, and total amount. Colorado law prohibits deceptive trade practices (Colo. Rev. Stat. 6-1-105) and requires collection agencies to be licensed. Colorado also has specific requirements for debt collection conduct. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly based on whether your specific creditors choose to participate in settlement-our calculator shows potential scenarios using documented industry data for Colorado residents."
       },
       {
         question: "How long does debt settlement take in Colorado?",
@@ -180,7 +180,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Colorado provide against debt collectors?",
-        answer: "Colorado provides strong consumer protections through the Colorado Consumer Protection Act (Colo. Rev. Stat. §6-1-101 et seq.) and the Colorado Fair Debt Collection Practices Act (Colo. Rev. Stat. §5-16-101 et seq.). These laws prohibit deceptive, unfair, and unconscionable debt collection practices. Colorado requires debt collectors to be licensed and follow specific rules about contact methods, disclosure requirements, and prohibited conduct. Federal Fair Debt Collection Practices Act protections also apply. Colorado courts require substantial documentation in debt collection lawsuits, making it harder for collectors to win without proper proof. Colorado limits wage garnishment to the lesser of 25% of disposable earnings or the amount by which weekly wages exceed 30 times federal minimum wage, with additional protections for low-income earners. These protections don't eliminate debt but prevent abusive tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Colorado's protective regulatory framework."
+        answer: "Colorado provides strong consumer protections through the Colorado Consumer Protection Act (Colo. Rev. Stat. 6-1-101 et seq.) and the Colorado Fair Debt Collection Practices Act (Colo. Rev. Stat. 5-16-101 et seq.). These laws prohibit deceptive, unfair, and unconscionable debt collection practices. Colorado requires debt collectors to be licensed and follow specific rules about contact methods, disclosure requirements, and prohibited conduct. Federal Fair Debt Collection Practices Act protections also apply. Colorado courts require substantial documentation in debt collection lawsuits, making it harder for collectors to win without proper proof. Colorado limits wage garnishment to the lesser of 25% of disposable earnings or the amount by which weekly wages exceed 30 times federal minimum wage, with additional protections for low-income earners. These protections don't eliminate debt but prevent abusive tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Colorado's protective regulatory framework."
       },
       {
         question: "What should Colorado residents know about debt relief?",
@@ -189,7 +189,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Colorado users, our calculations reference applicable state laws including the Colorado Consumer Protection Act (Colo. Rev. Stat. §6-1-101 et seq.), the Colorado Fair Debt Collection Practices Act (Colo. Rev. Stat. §5-16-101 et seq.), and related statutes.",
+      "For Colorado users, our calculations reference applicable state laws including the Colorado Consumer Protection Act (Colo. Rev. Stat. 6-1-101 et seq.), the Colorado Fair Debt Collection Practices Act (Colo. Rev. Stat. 5-16-101 et seq.), and related statutes.",
       "These laws regulate consumer protection and debt collection conduct in Colorado. Our calculator uses documented settlement data within Colorado's regulatory framework."
     ],
     
@@ -213,7 +213,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Connecticut?",
-        answer: "Debt settlement in Connecticut operates through negotiations with creditors to accept reduced balances, regulated under Connecticut's Unfair Trade Practices Act (Conn. Gen. Stat. §42-110a et seq.). The process involves stopping payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements. Our calculator estimates settlement percentages based on debt characteristics. Connecticut law provides strong consumer protections and prohibits deceptive practices in debt settlement services. Connecticut also requires debt collectors to be licensed and follow strict rules. The state's Department of Banking oversees credit services organizations. Settlement companies must provide clear fee disclosures and realistic expectations. Individual results vary based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry patterns for Connecticut residents."
+        answer: "Debt settlement in Connecticut operates through negotiations with creditors to accept reduced balances, regulated under Connecticut's Unfair Trade Practices Act (Conn. Gen. Stat. 42-110a et seq.). The process involves stopping payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements. Our calculator estimates settlement percentages based on debt characteristics. Connecticut law provides strong consumer protections and prohibits deceptive practices in debt settlement services. Connecticut also requires debt collectors to be licensed and follow strict rules. The state's Department of Banking oversees credit services organizations. Settlement companies must provide clear fee disclosures and realistic expectations. Individual results vary based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry patterns for Connecticut residents."
       },
       {
         question: "How long does debt settlement take in Connecticut?",
@@ -221,7 +221,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Connecticut provide for consumers in debt?",
-        answer: "Connecticut provides extensive consumer protections through the Connecticut Unfair Trade Practices Act (Conn. Gen. Stat. §42-110a et seq.) and specific debt collection regulations. Connecticut law prohibits harassment, deceptive practices, and unfair methods in debt collection. Connecticut requires debt collectors to be licensed by the Department of Banking and follow strict rules about contact methods, disclosure requirements, and prohibited conduct. Connecticut also has specific statutes governing debt buyers and collection agencies. Federal Fair Debt Collection Practices Act protections also apply. Connecticut limits wage garnishment to the lesser of 25% of disposable earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. These protections don't eliminate debt but prevent abusive tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Connecticut's protective regulatory framework."
+        answer: "Connecticut provides extensive consumer protections through the Connecticut Unfair Trade Practices Act (Conn. Gen. Stat. 42-110a et seq.) and specific debt collection regulations. Connecticut law prohibits harassment, deceptive practices, and unfair methods in debt collection. Connecticut requires debt collectors to be licensed by the Department of Banking and follow strict rules about contact methods, disclosure requirements, and prohibited conduct. Connecticut also has specific statutes governing debt buyers and collection agencies. Federal Fair Debt Collection Practices Act protections also apply. Connecticut limits wage garnishment to the lesser of 25% of disposable earnings or the amount by which weekly wages exceed 40 times federal minimum wage-providing stronger protection than federal minimums. These protections don't eliminate debt but prevent abusive tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Connecticut's protective regulatory framework."
       },
       {
         question: "What should Connecticut residents know about debt relief?",
@@ -230,7 +230,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Connecticut users, our calculations reference applicable state laws including the Connecticut Unfair Trade Practices Act (Conn. Gen. Stat. §42-110a et seq.), Connecticut Department of Banking regulations, and related consumer protection statutes.",
+      "For Connecticut users, our calculations reference applicable state laws including the Connecticut Unfair Trade Practices Act (Conn. Gen. Stat. 42-110a et seq.), Connecticut Department of Banking regulations, and related consumer protection statutes.",
       "These laws regulate consumer protection and debt collection practices in Connecticut. Our calculator uses documented settlement data within Connecticut's regulatory framework."
     ],
     
@@ -251,7 +251,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Delaware?",
-        answer: "Debt settlement in Delaware involves negotiating with creditors to accept less than full balances, operating under Delaware consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and amount. Delaware law prohibits deceptive practices through the Delaware Consumer Fraud Act (6 Del. C. §2511 et seq.). Delaware requires collection agencies to follow federal and state rules. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Delaware residents."
+        answer: "Debt settlement in Delaware involves negotiating with creditors to accept less than full balances, operating under Delaware consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt age, payment status, and amount. Delaware law prohibits deceptive practices through the Delaware Consumer Fraud Act (6 Del. C. 2511 et seq.). Delaware requires collection agencies to follow federal and state rules. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Delaware residents."
       },
       {
         question: "How long does debt settlement take in Delaware?",
@@ -259,7 +259,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Delaware provide against debt collectors?",
-        answer: "Delaware provides consumer protections through the Delaware Consumer Fraud Act (6 Del. C. §2511 et seq.) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Delaware residents, prohibiting harassment, threats, and false statements. Delaware law requires collection agencies to comply with state and federal regulations. Delaware courts require proper documentation in debt collection lawsuits. Delaware limits wage garnishment to 25% of disposable earnings or the amount by which weekly wages exceed 30 times federal minimum wage, whichever is less. Delaware also has consumer-friendly court procedures for challenging debt collection suits. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Delaware's regulatory framework."
+        answer: "Delaware provides consumer protections through the Delaware Consumer Fraud Act (6 Del. C. 2511 et seq.) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Delaware residents, prohibiting harassment, threats, and false statements. Delaware law requires collection agencies to comply with state and federal regulations. Delaware courts require proper documentation in debt collection lawsuits. Delaware limits wage garnishment to 25% of disposable earnings or the amount by which weekly wages exceed 30 times federal minimum wage, whichever is less. Delaware also has consumer-friendly court procedures for challenging debt collection suits. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Delaware's regulatory framework."
       },
       {
         question: "What should Delaware residents know about debt relief?",
@@ -268,7 +268,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Delaware users, our calculations reference applicable state laws including the Delaware Consumer Fraud Act (6 Del. C. §2511 et seq.) and related consumer protection statutes.",
+      "For Delaware users, our calculations reference applicable state laws including the Delaware Consumer Fraud Act (6 Del. C. 2511 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Delaware. Our calculator uses documented settlement data within Delaware's regulatory framework."
     ],
     
@@ -289,7 +289,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Hawaii?",
-        answer: "Debt settlement in Hawaii operates through negotiations with creditors to accept reduced balances, regulated under Hawaii's consumer protection laws. The process involves stopping payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements. Our calculator estimates settlement percentages based on debt characteristics. Hawaii law prohibits unfair and deceptive practices through the Unfair or Deceptive Acts or Practices Act (HRS §480). Hawaii requires collection agencies to be licensed and follow specific rules. Hawaii's geographic isolation and unique economy can affect debt collection and settlement dynamics. Settlement companies should provide clear disclosures about fees and realistic expectations. Individual results vary based on whether your specific creditors choose to negotiate-our calculator shows potential scenarios using industry data adapted for Hawaii's unique environment."
+        answer: "Debt settlement in Hawaii operates through negotiations with creditors to accept reduced balances, regulated under Hawaii's consumer protection laws. The process involves stopping payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements. Our calculator estimates settlement percentages based on debt characteristics. Hawaii law prohibits unfair and deceptive practices through the Unfair or Deceptive Acts or Practices Act (HRS 480). Hawaii requires collection agencies to be licensed and follow specific rules. Hawaii's geographic isolation and unique economy can affect debt collection and settlement dynamics. Settlement companies should provide clear disclosures about fees and realistic expectations. Individual results vary based on whether your specific creditors choose to negotiate-our calculator shows potential scenarios using industry data adapted for Hawaii's unique environment."
       },
       {
         question: "How long does debt settlement take in Hawaii?",
@@ -297,7 +297,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Hawaii provide for consumers in debt?",
-        answer: "Hawaii provides strong consumer protections through the Unfair or Deceptive Acts or Practices Act (HRS §480) which prohibits deceptive and unfair practices in consumer transactions, including debt collection and settlement. Federal Fair Debt Collection Practices Act protections also apply to all Hawaii residents. Hawaii law requires debt collectors to be licensed and follow strict rules. Hawaii has specific requirements for debt validation and disclosure. Hawaii limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage, with additional protections for low-income earners. Hawaii's geographic isolation sometimes creates unique debt collection challenges that can affect settlement dynamics. These protections don't eliminate debt but prevent abusive tactics and strengthen your negotiating position. Our calculator estimates debt reduction through settlement within Hawaii's protective regulatory framework."
+        answer: "Hawaii provides strong consumer protections through the Unfair or Deceptive Acts or Practices Act (HRS 480) which prohibits deceptive and unfair practices in consumer transactions, including debt collection and settlement. Federal Fair Debt Collection Practices Act protections also apply to all Hawaii residents. Hawaii law requires debt collectors to be licensed and follow strict rules. Hawaii has specific requirements for debt validation and disclosure. Hawaii limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage, with additional protections for low-income earners. Hawaii's geographic isolation sometimes creates unique debt collection challenges that can affect settlement dynamics. These protections don't eliminate debt but prevent abusive tactics and strengthen your negotiating position. Our calculator estimates debt reduction through settlement within Hawaii's protective regulatory framework."
       },
       {
         question: "What should Hawaii residents know about debt relief?",
@@ -306,7 +306,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Hawaii users, our calculations reference applicable state laws including Hawaii's Unfair or Deceptive Acts or Practices Act (HRS §480) and related consumer protection statutes.",
+      "For Hawaii users, our calculations reference applicable state laws including Hawaii's Unfair or Deceptive Acts or Practices Act (HRS 480) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit unfair practices in Hawaii. Our calculator uses documented settlement data within Hawaii's regulatory framework."
     ],
     
@@ -323,7 +323,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Idaho?",
-        answer: "Debt settlement in Idaho operates through negotiations with creditors to accept reduced balances, regulated under Idaho consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Idaho law prohibits unfair and deceptive practices through the Idaho Consumer Protection Act (Idaho Code §48-601 et seq.). Idaho requires collection agencies to be licensed through the Idaho Collection Agency Act. Settlement companies should provide clear disclosures about fees, timeline expectations, and realistic success rates. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry patterns for Idaho residents."
+        answer: "Debt settlement in Idaho operates through negotiations with creditors to accept reduced balances, regulated under Idaho consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate lump-sum settlements. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Idaho law prohibits unfair and deceptive practices through the Idaho Consumer Protection Act (Idaho Code 48-601 et seq.). Idaho requires collection agencies to be licensed through the Idaho Collection Agency Act. Settlement companies should provide clear disclosures about fees, timeline expectations, and realistic success rates. Individual results vary significantly based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry patterns for Idaho residents."
       },
       {
         question: "How long does debt settlement take in Idaho?",
@@ -331,7 +331,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Idaho provide for consumers in debt?",
-        answer: "Idaho provides consumer protections through the Idaho Consumer Protection Act (Idaho Code §48-601 et seq.) and the Idaho Collection Agency Act (Idaho Code §26-2222 et seq.). These laws prohibit unfair and deceptive practices in debt collection and require collection agencies to be licensed. Federal Fair Debt Collection Practices Act protections apply to all Idaho residents, prohibiting harassment, threats, and false statements. Idaho law requires debt collectors to follow specific rules about contact methods and prohibited conduct. Idaho limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Idaho courts require proper documentation in debt collection lawsuits. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Idaho's regulatory framework."
+        answer: "Idaho provides consumer protections through the Idaho Consumer Protection Act (Idaho Code 48-601 et seq.) and the Idaho Collection Agency Act (Idaho Code 26-2222 et seq.). These laws prohibit unfair and deceptive practices in debt collection and require collection agencies to be licensed. Federal Fair Debt Collection Practices Act protections apply to all Idaho residents, prohibiting harassment, threats, and false statements. Idaho law requires debt collectors to follow specific rules about contact methods and prohibited conduct. Idaho limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Idaho courts require proper documentation in debt collection lawsuits. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Idaho's regulatory framework."
       },
       {
         question: "What should Idaho residents know about debt relief?",
@@ -340,7 +340,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Idaho users, our calculations reference applicable state laws including the Idaho Consumer Protection Act (Idaho Code §48-601 et seq.), the Idaho Collection Agency Act (Idaho Code §26-2222 et seq.), and related statutes.",
+      "For Idaho users, our calculations reference applicable state laws including the Idaho Consumer Protection Act (Idaho Code 48-601 et seq.), the Idaho Collection Agency Act (Idaho Code 26-2222 et seq.), and related statutes.",
       "These laws regulate consumer protection and debt collection in Idaho. Our calculator uses documented settlement data within Idaho's regulatory framework."
     ],
     
@@ -364,7 +364,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Indiana?",
-        answer: "Debt settlement in Indiana involves negotiating with creditors to accept less than full balances, operating under Indiana consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt characteristics. Indiana law prohibits deceptive practices through the Indiana Deceptive Consumer Sales Act (Ind. Code §24-5-0.5). Indiana requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Indiana residents."
+        answer: "Debt settlement in Indiana involves negotiating with creditors to accept less than full balances, operating under Indiana consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs when funds accumulate. Our calculator estimates settlement percentages based on debt characteristics. Indiana law prohibits deceptive practices through the Indiana Deceptive Consumer Sales Act (Ind. Code 24-5-0.5). Indiana requires collection agencies to comply with state and federal regulations. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Indiana residents."
       },
       {
         question: "How long does debt settlement take in Indiana?",
@@ -372,7 +372,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Indiana provide against debt collectors?",
-        answer: "Indiana provides consumer protections through the Indiana Deceptive Consumer Sales Act (Ind. Code §24-5-0.5) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Indiana residents, prohibiting harassment, threats, false statements, and unfair methods. Indiana law requires collection agencies to comply with specific regulations. Indiana courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Indiana limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Indiana's regulatory framework."
+        answer: "Indiana provides consumer protections through the Indiana Deceptive Consumer Sales Act (Ind. Code 24-5-0.5) which prohibits deceptive and unfair practices in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Indiana residents, prohibiting harassment, threats, false statements, and unfair methods. Indiana law requires collection agencies to comply with specific regulations. Indiana courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Indiana limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Indiana's regulatory framework."
       },
       {
         question: "What should Indiana residents know about debt relief?",
@@ -381,7 +381,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Indiana users, our calculations reference applicable state laws including the Indiana Deceptive Consumer Sales Act (Ind. Code §24-5-0.5) and related consumer protection statutes.",
+      "For Indiana users, our calculations reference applicable state laws including the Indiana Deceptive Consumer Sales Act (Ind. Code 24-5-0.5) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Indiana. Our calculator uses documented settlement data within Indiana's regulatory framework."
     ],
     
@@ -402,7 +402,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Iowa?",
-        answer: "Debt settlement in Iowa operates through negotiations with creditors to accept reduced balances, regulated under Iowa consumer protection laws. The process involves stopping payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Iowa law prohibits unfair and deceptive practices through the Iowa Consumer Fraud Act (Iowa Code §714.16). Iowa also regulates collection agencies and debt buyers. The Iowa Consumer Credit Code provides additional consumer protections. Settlement companies should provide clear disclosures about fees and realistic expectations. Individual results vary based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry data for Iowa residents."
+        answer: "Debt settlement in Iowa operates through negotiations with creditors to accept reduced balances, regulated under Iowa consumer protection laws. The process involves stopping payments to creditors while saving in a dedicated account, then negotiating lump-sum settlements. Our calculator estimates settlement percentages based on debt age, payment status, and total amount. Iowa law prohibits unfair and deceptive practices through the Iowa Consumer Fraud Act (Iowa Code 714.16). Iowa also regulates collection agencies and debt buyers. The Iowa Consumer Credit Code provides additional consumer protections. Settlement companies should provide clear disclosures about fees and realistic expectations. Individual results vary based on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented industry data for Iowa residents."
       },
       {
         question: "How long does debt settlement take in Iowa?",
@@ -410,7 +410,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Iowa provide for consumers in debt?",
-        answer: "Iowa provides strong consumer protections through the Iowa Consumer Fraud Act (Iowa Code §714.16) and the Iowa Consumer Credit Code (Iowa Code Chapter 537). These laws prohibit unfair and deceptive practices in consumer transactions, including debt collection and settlement. Federal Fair Debt Collection Practices Act protections also apply to all Iowa residents. Iowa law requires debt collectors to follow specific rules and prohibits harassment, threats, and false statements. Iowa has strict requirements for debt validation and disclosure. Iowa limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Iowa courts require substantial documentation in debt collection lawsuits. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Iowa's protective regulatory framework."
+        answer: "Iowa provides strong consumer protections through the Iowa Consumer Fraud Act (Iowa Code 714.16) and the Iowa Consumer Credit Code (Iowa Code Chapter 537). These laws prohibit unfair and deceptive practices in consumer transactions, including debt collection and settlement. Federal Fair Debt Collection Practices Act protections also apply to all Iowa residents. Iowa law requires debt collectors to follow specific rules and prohibits harassment, threats, and false statements. Iowa has strict requirements for debt validation and disclosure. Iowa limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Iowa courts require substantial documentation in debt collection lawsuits. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Iowa's protective regulatory framework."
       },
       {
         question: "What should Iowa residents know about debt relief?",
@@ -419,7 +419,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Iowa users, our calculations reference applicable state laws including the Iowa Consumer Fraud Act (Iowa Code §714.16), the Iowa Consumer Credit Code (Iowa Code Chapter 537), and related statutes.",
+      "For Iowa users, our calculations reference applicable state laws including the Iowa Consumer Fraud Act (Iowa Code 714.16), the Iowa Consumer Credit Code (Iowa Code Chapter 537), and related statutes.",
       "These laws regulate consumer protection and debt collection in Iowa. Our calculator uses documented settlement data within Iowa's regulatory framework."
     ],
     
@@ -443,7 +443,7 @@ export const remaining40StatesPart1 = {
     faqs: [
       {
         question: "How does debt settlement work in Kansas?",
-        answer: "Debt settlement in Kansas involves negotiating with creditors to accept less than full balances, operating under Kansas consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs. Our calculator estimates settlement percentages based on debt characteristics. Kansas law prohibits unfair and deceptive practices through the Kansas Consumer Protection Act (K.S.A. §50-623 et seq.). Kansas also regulates collection agencies and requires compliance with state and federal laws. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Kansas residents."
+        answer: "Debt settlement in Kansas involves negotiating with creditors to accept less than full balances, operating under Kansas consumer protection laws. You stop making payments to creditors while saving in a dedicated account, then settlement companies negotiate reduced payoffs. Our calculator estimates settlement percentages based on debt characteristics. Kansas law prohibits unfair and deceptive practices through the Kansas Consumer Protection Act (K.S.A. 50-623 et seq.). Kansas also regulates collection agencies and requires compliance with state and federal laws. Settlement companies should provide transparent fee disclosures and realistic timeline expectations. Individual results vary significantly depending on whether your specific creditors choose to settle-our calculator shows potential scenarios using documented settlement patterns for Kansas residents."
       },
       {
         question: "How long does debt settlement take in Kansas?",
@@ -451,7 +451,7 @@ export const remaining40StatesPart1 = {
       },
       {
         question: "What protections does Kansas provide against debt collectors?",
-        answer: "Kansas provides consumer protections through the Kansas Consumer Protection Act (K.S.A. §50-623 et seq.) which prohibits deceptive and unconscionable acts in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Kansas residents, prohibiting harassment, threats, false statements, and unfair methods. Kansas law requires collection agencies to be licensed and follow specific rules. Kansas courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Kansas limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Kansas also has specific protections in its Consumer Credit Code. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Kansas's regulatory framework."
+        answer: "Kansas provides consumer protections through the Kansas Consumer Protection Act (K.S.A. 50-623 et seq.) which prohibits deceptive and unconscionable acts in consumer transactions, including debt collection. Federal Fair Debt Collection Practices Act protections apply to all Kansas residents, prohibiting harassment, threats, false statements, and unfair methods. Kansas law requires collection agencies to be licensed and follow specific rules. Kansas courts require proper documentation in debt collection lawsuits, making it harder for collectors to win without proving debts. Kansas limits wage garnishment to the lesser of 25% of disposable weekly earnings or the amount by which weekly wages exceed 30 times federal minimum wage. Kansas also has specific protections in its Consumer Credit Code. These protections don't eliminate debt but prevent abusive collection tactics and strengthen your position during settlement negotiations. Our calculator estimates debt reduction through settlement within Kansas's regulatory framework."
       },
       {
         question: "What should Kansas residents know about debt relief?",
@@ -460,7 +460,7 @@ export const remaining40StatesPart1 = {
     ],
     
     statutes: [
-      "For Kansas users, our calculations reference applicable state laws including the Kansas Consumer Protection Act (K.S.A. §50-623 et seq.) and related consumer protection statutes.",
+      "For Kansas users, our calculations reference applicable state laws including the Kansas Consumer Protection Act (K.S.A. 50-623 et seq.) and related consumer protection statutes.",
       "These laws regulate consumer protection and prohibit deceptive practices in Kansas. Our calculator uses documented settlement data within Kansas's regulatory framework."
     ],
     

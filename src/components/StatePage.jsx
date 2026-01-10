@@ -423,9 +423,9 @@ const StatePage = ({ stateData }) => {
       <div className="breadcrumb">
         <nav className="breadcrumb-nav" aria-label="Breadcrumb">
           <a href="/debt-calculators/" className="breadcrumb-link">Debt Calculators</a>
-          <span className="breadcrumb-separator">-º</span>
+          <span className="breadcrumb-separator">-</span>
           <a href="/debt-relief-calculator/" className="breadcrumb-link">Debt Relief Calculator</a>
-          <span className="breadcrumb-separator">-º</span>
+          <span className="breadcrumb-separator">-</span>
           <span className="breadcrumb-current">{stateName}</span>
         </nav>
       </div>
@@ -459,7 +459,7 @@ const StatePage = ({ stateData }) => {
               aria-expanded={showStatutes}
             >
               <span className="statute-title">
-                “œ {stateName} Jurisdiction Information
+                 {stateName} Jurisdiction Information
               </span>
               {showStatutes ? (
                 <ChevronUp className="statute-icon" size={24} />

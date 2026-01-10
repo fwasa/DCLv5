@@ -4,6 +4,14 @@ export const metadata = {
   title: 'DebtCalculatorLab - Educational Debt Relief Calculators',
   description: 'Free debt relief calculators reviewed by a CPA. Educational estimates for understanding your debt relief options.',
   charset: 'utf-8',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({ children }) {
@@ -11,6 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#667eea" />
       </head>
       <body>
         {/* Google Analytics */}

@@ -359,9 +359,9 @@ export const princeEdwardIsland = canadianProvinces["prince-edward-island"];
 export const newfoundlandAndLabrador = canadianProvinces["newfoundland-and-labrador"];
 
 /**
- * ✅ PHASE 6E COMPLETE: All 9 Canadian Provinces!
+ *  PHASE 6E COMPLETE: All 9 Canadian Provinces!
  * 
- * Total: 36 unique FAQs created (9 provinces × 4 FAQs each)
+ * Total: 36 unique FAQs created (9 provinces  4 FAQs each)
  * Total unique content: ~6,200 words
  * 
  * Provinces (Excluding Quebec):

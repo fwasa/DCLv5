@@ -565,7 +565,7 @@ const DebtReliefCalculator = () => {
         return (
           <div className="question-content">
             <h2 className="question-title">What's your current payment status?</h2>
-            <p className="question-helper">We don't judge"”this helps us model realistic outcomes for your situation.</p>
+            <p className="question-helper">We don't judge"this helps us model realistic outcomes for your situation.</p>
             
             <div className="radio-group">
               {[
@@ -824,7 +824,7 @@ const DebtReliefCalculator = () => {
               </div>
 
               <div className="third-party-disclosure">
-                <h4>“‹ Important Disclosures</h4>
+                <h4> Important Disclosures</h4>
                 
                 <div className="disclosure-block">
                   <strong>Third-Party Partner Notice:</strong>
@@ -974,7 +974,7 @@ const DebtReliefCalculator = () => {
           
           <div className="savings-cards">
             <div className="savings-card">
-              <div className="savings-icon">’°</div>
+              <div className="savings-icon"></div>
               <div className="savings-content">
                 <div className="savings-label">Potential Monthly Savings</div>
                 <div className="savings-value">
@@ -984,7 +984,7 @@ const DebtReliefCalculator = () => {
             </div>
 
             <div className="savings-card">
-              <div className="savings-icon">“‰</div>
+              <div className="savings-icon"></div>
               <div className="savings-content">
                 <div className="savings-label">Estimated Total Reduction</div>
                 <div className="savings-value">
@@ -1012,7 +1012,7 @@ const DebtReliefCalculator = () => {
         {formData.jurisdiction && (
           <div className="statute-reference">
             <details>
-              <summary>“œ Jurisdiction-Specific Information</summary>
+              <summary> Jurisdiction-Specific Information</summary>
               <div className="statute-content">
                 <p>
                   Calculations for <strong>{formData.jurisdiction}</strong> users reference 
@@ -1039,7 +1039,7 @@ const DebtReliefCalculator = () => {
                 clarify your options and next steps.
               </p>
               <a href="tel:1-800-555-0123" className="cta-button primary">
-                “ž Call (800) 555-0123
+                 Call (800) 555-0123
               </a>
               <p className="cta-hours">Mon-Fri 8am-8pm EST</p>
             </div>
@@ -2391,7 +2391,7 @@ const DebtReliefCalculator = () => {
           aria-expanded={showMethodology}
           aria-controls="methodology-content"
         >
-          <span className="methodology-icon">“Š</span>
+          <span className="methodology-icon"></span>
           <span className="methodology-title">How We Calculate Your Estimate</span>
           <span className={`methodology-arrow ${showMethodology ? 'open' : ''}`}>v</span>
         </button>
